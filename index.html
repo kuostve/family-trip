@@ -77,6 +77,8 @@ const Q=[
   {id:'date',type:'pick',title:'提夫家什麼時候去比較好？',hint:'只能請 2 天假，春節連假是 2/4–2/10',show:()=>A.fam==='tf'&&!isKid(),opts:[['early','🅰️','2/2–2/10（9 天）\n請 2/2、2/3'],['late','🅱️','2/4–2/13（10 天）\n請 2/11、2/12\n可跟姐夫家一起回'],['any','🤷','都可以']]},
   {id:'note',type:'text',long:true,title:'還有什麼想說的？',hint:'可跳過。例如：想吃什麼、去年泰國最喜歡哪一段、會暈車……',ph:'（可以不填）'}
 ];
+// 填答紀錄存到提夫的 Google 試算表（Apps Script 網頁應用程式網址）；空的就只用 LINE
+const ENDPOINT='https://script.google.com/macros/s/AKfycbxnKGlB0GbRlPYoNljLPUZcbxWNN1htLBf37LVHWDAYSjVT813_eFzJaz64uAW5J5xD1Q/exec';
 const A={}; let i=-1;
 const $=s=>document.querySelector(s), stage=$('#stage');
 const lab=(list,k)=>{const o=list.find(x=>x[0]===k);return o?o[2].replace(/\n/g,' '):k};
@@ -84,7 +86,8 @@ const lab=(list,k)=>{const o=list.find(x=>x[0]===k);return o?o[2].replace(/\n/g,
 function intro(){
   stage.innerHTML=`<div class="center"><div class="big">🇲🇾🧧</div><h1>2027 過年・新山見！</h1>
   <p class="hint">2027/2/2–2/13，全家 10 個人一起去馬來西亞新山。<br>幫忙填一下，大概 2 分鐘，全部用點的，小朋友也可以自己填。<br>大家的答案會整理成最適合全家的行程。</p>
-  <button class="btn" id="go">開始</button></div>`;
+  <button class="btn" id="go">開始</button>
+  <a href="results.html" style="display:block;margin-top:14px;color:var(--sub);font-size:14px">看大家的答案 →</a></div>`;
   $('#go').onclick=()=>go(0); upd();
 }
 function upd(){
@@ -149,15 +152,25 @@ function summary(){
   L.push('','#'+code);
   return L.join('\n');
 }
+function save(s){
+  if(!ENDPOINT) return Promise.resolve(false);
+  const body=JSON.stringify({name:A.name,fam:lab(Q[1].opts,A.fam),text:s,answers:A});
+  return fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body}).then(()=>true,()=>false);
+}
 function done(){
   i=Q.length; upd(); $('#bar').style.width='100%';
   const s=summary();
-  stage.innerHTML=`<div class="center"><div class="big">🎉</div><h2>謝謝你！最後一步</h2>
-  <p class="hint">按下面的綠色按鈕，把結果傳到家族 LINE 群（或直接傳給提夫）。</p></div>
+  stage.innerHTML=`<div class="center"><div class="big">🎉</div><h2>謝謝你！</h2>
+  <p class="hint" id="st">${ENDPOINT?'正在存到網站⋯':'按下面的綠色按鈕，把結果傳到家族 LINE 群（或直接傳給提夫）。'}</p></div>
   <pre id="sum"></pre>
+  <a class="btn" id="all" href="results.html" style="display:none;text-align:center;text-decoration:none">看大家的答案</a>
   <button class="btn line" id="line">用 LINE 傳出去</button>
   <button class="btn ghost" id="copy">複製文字</button>`;
   $('#sum').textContent=s;
+  save(s).then(ok=>{ if(!ENDPOINT) return;
+    $('#st').textContent=ok?'已經存到網站了 ✓ 不用再傳 LINE。':'沒存成功，請按綠色按鈕用 LINE 傳給提夫。';
+    if(ok){$('#all').style.display='block';$('#line').className='btn ghost'}
+  });
   $('#line').onclick=()=>location.href='https://line.me/R/share?text='+encodeURIComponent(s);
   $('#copy').onclick=async()=>{
     try{await navigator.clipboard.writeText(s)}catch(e){const r=document.createRange();r.selectNode($('#sum'));getSelection().removeAllRanges();getSelection().addRange(r);document.execCommand('copy')}
