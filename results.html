@@ -35,7 +35,7 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 if(!ENDPOINT){$('#sub').textContent='還沒接上試算表。'}
 else fetch(ENDPOINT).then(r=>r.json()).then(({rows})=>{
-  const last={}; rows.filter(r=>!String(r.name).startsWith('測試')).forEach(r=>last[r.name]=r);  // 同一個人填兩次，只算最後一次
+  const last={}; rows.filter(r=>!String(r.name).startsWith('測試')&&!String(r.text||'').startsWith('【投票】')).forEach(r=>last[r.name]=r);  // 同一個人填兩次只算最後一次；排除行程投票紀錄
   const L=Object.values(last).sort((a,b)=>new Date(b.time)-new Date(a.time));
   $('#sub').textContent=L.length?`已經有 ${L.length} 個人填了`:'還沒有人填，當第一個吧！';
   const c={}; L.forEach(r=>(r.answers.acts||[]).forEach(k=>c[k]=(c[k]||0)+1));

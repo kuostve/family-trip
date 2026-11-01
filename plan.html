@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2027 新山過年・家族行程投票</title>
+<style>
+  :root{
+    --sand:#fdf6ec; --card:#fff; --ink:#243b40; --sub:#6b8490; --sea:#0e7c86; --sea-d:#0a5c64;
+    --foam:#e6f4f4; --coral:#ff7a59; --sun:#ffc861; --ok:#2fa36b;
+    --shadow:0 6px 22px rgba(20,70,80,.08); --shadow-s:0 2px 10px rgba(20,70,80,.07);
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--sand);color:var(--ink);font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:16px;line-height:1.6}
+  img{display:block;width:100%}
+  a{color:var(--sea)}
+  .wrap{max-width:520px;margin:0 auto;padding:0 0 120px}
+  /* hero */
+  .hero{position:relative;background:linear-gradient(160deg,#0e7c86,#0a5c64 55%,#08474e);color:#fff;padding:30px 20px 26px;border-radius:0 0 26px 26px;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-40px;top:-40px;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.08)}
+  .hero .kick{font-size:13px;letter-spacing:.14em;opacity:.85;margin:0 0 8px}
+  .hero h1{font-size:27px;line-height:1.3;margin:0 0 10px;font-weight:700}
+  .hero p{margin:0;font-size:15px;opacity:.94}
+  .hero .date{display:inline-block;margin-top:14px;background:rgba(255,255,255,.16);border-radius:99px;padding:6px 14px;font-size:14px}
+  /* sections */
+  section{padding:0 16px}
+  h2.sec{font-size:20px;margin:30px 0 4px;display:flex;align-items:center;gap:8px}
+  h2.sec .n{font-size:13px;font-weight:600;color:#fff;background:var(--sea);border-radius:99px;padding:2px 9px;letter-spacing:.06em}
+  p.sub{color:var(--sub);font-size:14px;margin:0 0 14px}
+  .card{background:var(--card);border-radius:18px;box-shadow:var(--shadow-s);padding:16px}
+  .summary{background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:18px;margin-top:-18px;position:relative}
+  .summary h3{margin:0 0 8px;font-size:16px;color:var(--sea-d)}
+  .summary ul{margin:0;padding-left:20px;font-size:15px}
+  .summary li{margin:3px 0}
+  /* timeline */
+  .tl{margin-top:8px}
+  .tl .item{display:flex;gap:12px;padding:0 0 16px}
+  .tl .dot{flex:0 0 34px;height:34px;border-radius:50%;background:var(--foam);color:var(--sea-d);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+  .tl .body{background:#fff;border-radius:16px;box-shadow:var(--shadow-s);padding:13px 15px;flex:1}
+  .tl .body b{font-size:16px}
+  .tl .body .d{font-size:13px;color:var(--sub);margin-left:6px;font-weight:400}
+  .tl .body p{margin:6px 0 0;font-size:14.5px;color:#3f5560}
+  .tl .body .split{display:inline-block;margin-top:8px;font-size:13px;background:#fff3ec;color:#c2410c;border-radius:99px;padding:3px 10px}
+  /* question */
+  .q{margin-top:8px}
+  .q .qtitle{display:flex;align-items:baseline;gap:8px;margin:0 0 2px}
+  .q .qtitle h3{margin:0;font-size:18px}
+  .q .qtitle span{font-size:13px;color:var(--sub)}
+  .strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 16px 16px;margin:0 -16px;-webkit-overflow-scrolling:touch}
+  .strip::-webkit-scrollbar{height:0}
+  .opt{flex:0 0 84%;max-width:330px;scroll-snap-align:center;background:#fff;border-radius:20px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;border:2px solid transparent}
+  .opt.sel{border-color:var(--sea);box-shadow:0 8px 26px rgba(14,124,134,.22)}
+  .opt .pic{position:relative;aspect-ratio:16/10;background:#dfe9ea}
+  .opt .pic img{width:100%;height:100%;object-fit:cover}
+  .opt .lvl{position:absolute;left:10px;top:10px;background:rgba(0,0,0,.55);color:#fff;border-radius:99px;padding:3px 10px;font-size:12px}
+  .opt .pic .src{position:absolute;right:8px;bottom:6px;font-size:10px;color:#fff;background:rgba(0,0,0,.45);border-radius:6px;padding:1px 6px;text-decoration:none}
+  .opt .in{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+  .opt h4{margin:0 0 6px;font-size:17px;line-height:1.35}
+  .opt .price{font-size:15px;font-weight:700;color:var(--sea-d);margin:0 0 2px}
+  .opt .price small{font-weight:400;color:var(--sub);font-size:12.5px;display:block}
+  .opt ul{margin:10px 0 0;padding-left:19px;font-size:14.5px}
+  .opt ul li{margin:3px 0}
+  .opt .who{margin:10px 0 0;font-size:13.5px;background:var(--foam);color:var(--sea-d);border-radius:10px;padding:7px 10px}
+  .opt .tips{margin:10px 0 0;font-size:13.5px;color:#4a6068}
+  .opt .tips div{margin:5px 0}
+  .opt .warn{margin:10px 0 0;font-size:13.5px;color:#c2410c;background:#fff7f0;border-radius:10px;padding:8px 10px}
+  .opt .votes{margin:12px 0 0;font-size:13px;color:var(--sub)}
+  .opt .votes b{color:var(--coral)}
+  .opt .pick{margin-top:12px;width:100%;border:0;border-radius:14px;padding:13px;font-size:16px;font-weight:700;font-family:inherit;background:var(--foam);color:var(--sea-d);cursor:pointer}
+  .opt.sel .pick{background:var(--sea);color:#fff}
+  .swipe{font-size:12.5px;color:var(--sub);text-align:right;margin:-10px 0 0}
+  /* calendar */
+  .cal{overflow-x:auto;background:#fff;border-radius:18px;box-shadow:var(--shadow-s);padding:12px}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{text-align:center;padding:4px 2px;white-space:nowrap}
+  th.nm{text-align:left;padding-right:8px;font-weight:600}
+  td.c{cursor:pointer;width:26px}
+  td.c i{display:block;width:22px;height:22px;border-radius:6px;background:#f1f5f5;margin:0 auto}
+  td.c.on i{background:var(--sea)}
+  tr.me td.nm{color:var(--sea-d)}
+  .legend{font-size:12.5px;color:var(--sub);margin:8px 0 0}
+  /* submit */
+  .form{margin-top:12px}
+  .form label{font-size:14px;color:var(--sub);display:block;margin-bottom:6px}
+  input[type=text]{width:100%;font-size:16px;padding:13px;border-radius:14px;border:2px solid #e3eeee;background:#fff;font-family:inherit}
+  input[type=text]:focus{outline:none;border-color:var(--sea)}
+  .bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 -4px 20px rgba(20,70,80,.10);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+  .bar .inner{max-width:520px;margin:0 auto;display:flex;align-items:center;gap:12px}
+  .bar .cnt{font-size:13px;color:var(--sub);flex:0 0 auto}
+  .bar button{flex:1;border:0;border-radius:16px;padding:15px;font-size:17px;font-weight:700;font-family:inherit;background:var(--sea);color:#fff;cursor:pointer}
+  .bar button:disabled{background:#c7d8da}
+  .done{background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:22px;text-align:center;margin-top:16px}
+  .done .big{font-size:52px}
+  .done h3{margin:6px 0;font-size:19px}
+  .done p{margin:0;color:var(--sub);font-size:14.5px}
+  .also{display:block;text-align:center;margin:18px 0 0;color:var(--sub);font-size:14px}
+  .note{font-size:12.5px;color:var(--sub);margin:22px 0 0;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <p class="kick">2027 過年・家族旅行</p>
+    <h1 id="h1">新山＋迪沙魯，<br>一起去投票</h1>
+    <p id="hs">問卷大家都填完了，接下來換你選。</p>
+    <span class="date" id="hd">2027/2/2–2/13・10 個人</span>
+  </div>
+
+  <section>
+    <div class="summary">
+      <h3>問卷結果一句話</h3>
+      <p id="sum" style="margin:0 0 8px;font-size:15px"></p>
+      <ul id="sumul"></ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec"><span class="n">行程骨架</span>大概這樣走</h2>
+    <p class="sub" id="skeletonSub"></p>
+    <div class="tl" id="tl"></div>
+  </section>
+
+  <section id="voteArea">
+    <h2 class="sec"><span class="n">投票</span>選你想要的</h2>
+    <p class="sub">每一題左右滑，看完再按「投這個」。可以只投有想法的題目，投完按最下面的送出。</p>
+    <div id="qs"></div>
+    <div class="form card" style="margin-top:18px">
+      <label>你的稱呼（同一人重投以最後一次為準）</label>
+      <input type="text" id="name" placeholder="例如：提夫、xo、老爸、阿媽、乃瑜、卞" maxlength="20">
+    </div>
+    <a class="also" href="./results.html">看問卷「大家的答案」→</a>
+  </section>
+
+  <div id="doneBox"></div>
+
+  <p class="note">資料來源：官網、訂房網站與公開社群貼文，每張卡片下方標有來源。<br>價格為查證當時的參考值（非 2027 過年實際報價），下單前請再確認。</p>
+</div>
+
+<div class="bar" id="bar"><div class="inner">
+  <span class="cnt" id="cnt">已選 0 題</span>
+  <button id="send">送出我的投票</button>
+</div></div>
+
+<script>
+const ENDPOINT="https://script.google.com/macros/s/AKfycbxnKGlB0GbRlPYoNljLPUZcbxWNN1htLBf37LVHWDAYSjVT813_eFzJaz64uAW5J5xD1Q/exec";
+const DATA={"title":"新山＋迪沙魯，一起去投票","subtitle":"問卷大家都填完了，接下來換你選。每題左右滑，看完再按「投這個」。","dates":"2027/2/2–2/13・10 個人・除夕 2/5（五）初一 2/6（六）","summary":"慢慢玩、睡飽再出門、中午躲室內；要海邊度假村＋水上樂園，加漁村海鮮、農場螢火蟲、在地早餐茶室。新加坡一日只有乃瑜、卞想去，做成可選分頭日，不強迫全家。","summaryPoints":["節奏慢、大多想睡飽再出門 → 中午排室內或泳池，戶外排早上或傍晚（3 人很怕熱）","4 票想去迪沙魯海邊度假村；乃瑜「一定要」水上樂園 → 迪沙魯 Adventure Waterpark 兩全","一定要：漁村海鮮（老爸）、農場／螢火蟲（阿媽）、在地小吃早餐茶室（卞、xo）、水上樂園（乃瑜）","還有人想要：樂高樂園（阿媽）、Outlet（提夫、乃瑜）、按摩（提夫）、老街廟宇過年氣氛（卞、xo）","台灣春節連假 2027/2/4（四）–2/10（三）共 7 天；姐夫家在新山 2/2–2/13"],"skeletonHint":"日期與順序都可以調，先看個大概。🔀 表示這幾天可以分頭玩。","skeleton":[{"tag":"2/2","date":"星期二","title":"抵達新山","text":"茶室早餐、老街走走、逛逛商場避暑。","split":"想去新加坡的人可挑 2/2–2/4 其中一天"},{"tag":"2/3","date":"三–四","title":"新山市區 2 天","text":"老街、廟宇、茶室早餐；中午躲商場；找時間拜訪姐夫家、看看新家。","split":"老街逛街／商場避暑可分頭"},{"tag":"2/5","date":"星期五","title":"除夕・團圓飯","text":"除夕當天多數華人店家提早打烊，團圓飯建議先訂位，優先飯店餐廳或大型連鎖。"},{"tag":"2/6","date":"星期六","title":"初一 → 迪沙魯度假村（住 3 晚）","text":"移動到迪沙魯海岸，泳池放空、玩水。11–2 月海邊浪大，玩水以泳池與水上樂園為主。","split":"想留新山的可留，分頭走"},{"tag":"2/7","date":"日–一","title":"迪沙魯玩透","text":"Adventure Waterpark、水果農場、漁村海鮮、（可選）螢火蟲。中午最熱，排室內或泳池。"},{"tag":"2/9","date":"二之後","title":"可選：新加坡一日／樂高／Outlet／按摩","text":"新加坡一日做成可選分頭日（只有乃瑜、卞想去）；樂高、JPO、按摩看投票結果。姐夫家 3–4 天、提夫家 5–6 天各自安排。","split":"新加坡一日＝可選分頭日"}],"questions":[{"id":"desaru","title":"迪沙魯住哪一間？","hint":"住 3 晚・三種價位","note":"三間都在 Desaru Coast 大門內（Lotus 在大門外 4.5km），園區內有免費接駁車。","options":[{"key":"lotus","level":"便宜","name":"Lotus Desaru Beach Resort & Spa","img":"https://lotusdesaru.com/upload/resize_cache/iblock/b7b/800_500_2/c5tcz6rtccrqwxa73hycvdidkfb7lvm3.jpg","imgSrc":{"label":"Lotus 官網","url":"https://lotusdesaru.com/rooms"},"price":"家庭房約 MYR 296／晚 ≈ NT$2,400","priceNote":"標準房 MYR 200 起；房價多不含早餐（自助早餐大人 MYR 40）。非過年價，查證 2026-11-02","highlights":["價格最親民、空間最大：793 間公寓／套房，還有 4 房家庭套房，整家族可以住一戶","自帶迷你 SPLASH 水上樂園＋泳池＋SPA，小孩放電方便","離水果園、鱷魚園、螢火蟲、漁村都近，適合當「往外跑」的基地"],"who":"預算優先的大家庭、小孩；離 Adventure Waterpark 4.5km，開車約 10 分（要自駕或叫車）","tips":[{"t":"sengkangbabies 家庭部落格：2 房單位空間大，適合家族同住。","u":"https://sengkangbabies.com/tag/lotus-desaru-review"},{"t":"TripAdvisor 評論：房間偏舊但乾淨、陽台沒家具。","u":"https://www.tripadvisor.com/ShowUserReviews-g4564007-d1629838-r63173403-Lotus_Desaru_Beach_Resort_Spa-Bandar_Penawar_Kota_Tinggi_District_Johor.html"}],"warn":"4 星、2009 年開業偏舊；自營水上樂園規模小，不是 Adventure Waterpark；過年人多"},{"key":"hardrock","level":"中間","name":"Hard Rock Hotel Desaru Coast","img":"https://hotel.hardrock.com/desaru-coast/files/6014/HRH_Desaru_Coast_Exterior_0009.jpeg","imgSrc":{"label":"Hard Rock 官網","url":"https://hotel.hardrock.com/desaru-coast/family.aspx"},"price":"標準房約 MYR 587（S$185）／晚 ≈ NT$4,700","priceNote":"家庭連通房 S$400–650；官網直訂方案含每日早餐＋每位住客水上樂園門票。非過年價，查證 2026-11-02","highlights":["離水上樂園最近：240 公尺、走路 1–2 分，1 樓有專屬入口可無限次進出（玩累回房沖洗再進）","親子設施最強：Roxity Kids Club、戶外泳池、音樂主題","位在園區大門內，海灘、各餐廳、接駁車都方便"],"who":"小孩首選；怕熱的人最適合（離水樂園最近、可一直回房回血）","tips":[{"t":"Facebook 中文心得（二嫂）：最大優點是 1 樓直接進水上樂園、可無限 Re-Enter、玩完直接回房沖洗。","u":"https://www.facebook.com/fionlovelife/posts/1564664131684749/"},{"t":"a j 旅行社部落格（中文）：入住緊鄰水上樂園的硬石酒店、有獨立通道。","u":"https://ajtravel.tw/20230320/"}],"warn":"免費水上樂園門票＋早餐只限「官網直訂」，第三方訂房通常不含票；過年是超級旺季會大幅加價；水上樂園週二休；連通房數量有限要提早鎖"},{"key":"anantara","level":"高級","name":"Anantara Desaru Coast Resort & Villas","img":"https://assets.anantara.com/image/upload/q_auto,f_auto/media/minor/anantara/images/anantara-desaru-coast-resort-villas/homepage-banner/anantara_desaru_coast_homepage_fallback_image_mar2023_1929x1080.jpg","imgSrc":{"label":"Anantara 官網","url":"https://www.anantara.com/en/desaru-coast"},"price":"Deluxe 約 MYR 854（S$269）／晚 ≈ NT$6,860","priceNote":"多數方案含早餐；另有 3–4 房 Residence（私人泳池、管家、廚房）。非過年價，查證 2026-11-02","highlights":["質感最高：私人海灘＋海景無邊際泳池，曾獲 TTG Asia「亞太最佳海灘度假村」","有 3–4 房 Residence，多代同堂可以住一起、有廚房","大門內、園區接駁方便；餐飲與 SPA 評價好"],"who":"長輩首選（安靜、平坦、服務細）；小孩有 Kids Club 與 Teens Club","tips":[{"t":"girleatworld（帶嬰兒實住）：大浴室、直接沙灘、無邊際泳池、接駁方便，三間中最推薦。","u":"https://girleatworld.net/anantara-desaru-coast-resort-review"},{"t":"Trip.com 社群（中文）：「柔佛小峇里島」、私人海灘＋兩泳池＋獨棟 Villa，旁邊就是水上樂園。","u":"https://ca.trip.com/moments/poi-anantara-desaru-coast-resort-77308324"}],"warn":"三間裡最貴、過年會再上調；離水上樂園 700m–1km 要走 8–12 分（怕熱搭接駁）；11–2 月海邊浪大不宜下海"}]},{"id":"jbarea","title":"新山市區住哪一區？","hint":"住 2–3 晚・含推薦飯店","note":"2027/2 過年的房價各平台還沒開放，以下都是最近的公開價（非過年價）。","options":[{"key":"oldtown","level":"市區最方便","name":"A・市中心老城區（陳旭年街一帶）","img":"https://media.onyx-hospitality.com/-/media/project/amari/common/property/johor-bahru/hotel_4share.jpg","imgSrc":{"label":"Amari 官網","url":"https://www.amari.com/johor-bahru"},"price":"Amari 官網套裝 MYR 490／晚（含早餐＋半自助午餐）；Trip.com 約 US$73 起","priceNote":"Holiday Inn 約 MYR 305–331／晚；平價備選 Z Hotel 約 US$33。非過年價，查證 2026-11-02","highlights":["走到陳旭年街 3 分鐘、柔佛古廟、兩大商場（City Square／Komtar），市區 2 天幾乎不用叫車","Holiday Inn 在 Komtar 樓上，有遮蔭天橋直通 CIQ，要去新加坡最省事；32 樓頂樓無邊際泳池看得到新山＋新加坡天際線","中午怕熱就躲商場，長輩不用走遠"],"who":"長輩（步行可達）、怕熱（室內動線）、小孩（有兒童池）","tips":[{"t":"thetravelintern：走路到 JB Sentral，早餐被譽為 hawker 天堂。","u":"https://thetravelintern.com/affordable-fancy-hotels-in-jb"},{"t":"springtomorrow 實住：Amari 位置一流，但設施與服務未達 5 星。","u":"https://www.springtomorrow.com/amari-johor-bahru-review"}],"warn":"市區易塞車，10 人建議叫 2–3 台 Grab；初一初二老城茶室多數休息（想吃排除夕前）；除夕團圓飯要訂位"},{"key":"skudai","level":"近住宅區","name":"B・Skudai 士古來（近姐夫家）","img":"https://ak-d.tripcdn.com/images/1mc0c12000chs80ij6F0D_R_960_660_R5_D.jpg","imgSrc":{"label":"Trip.com 飯店頁","url":"https://www.hyatt.com/hyatt-place/en-US/jhbzj-hyatt-place-johor-bahru-paradigm-mall"},"price":"Hyatt Place 家庭房 RM335／晚（含 4 人早餐）；Trip.com 最低約 US$101","priceNote":"平價備選 Bzz Hotel Skudai 約 US$51。非過年價，查證 2026-11-02","highlights":["直結 Paradigm Mall：吃喝、購物、按摩、室內兒童遊樂場一次滿足","Hyatt Place 2023 新開、33㎡ 家庭房可安排連通房，兩家各住一戶很好安排","房價比市中心親民、停車方便"],"who":"小孩（商場遊樂＋泳池）、長輩（電梯直達商場不用走遠）、怕熱（室內）","tips":[{"t":"TheShutterwhale：新開、直結 Paradigm Mall、購物用餐方便。","u":"https://theshutterwhale.com/blog/2024/1/30/hotel-review-hyatt-place-johor-bahru-paradigm-mall"},{"t":"Trip.com 旅客：訂了 2 間，飯店主動給連通房，對長輩與小孩很棒。","u":"https://sg.trip.com/hotels/sekudai-hotel-detail-113527395/hyatt-place-johor-bahru-paradigm-mall"}],"warn":"離市區 15–20 分鐘車程；若姐夫家其實在 Tebrau／Mount Austin 一帶，改住 Tebrau 更近（姐夫家位置未查證）"},{"key":"puteri","level":"近樂高／Outlet","name":"C・Puteri Harbour／Medini 一帶","img":"https://www.discoverasr.com/en/somerset-serviced-residence/malaysia/somerset-medini-iskandar-puteri/_/root.coreimg.85.1600.jpg/assets/tal/media/images/properties/malaysia/iskandar-puteri/somerset-medini-iskandar-puteri/gallery/SR_Malaysia_Nusajaya_Som-Medini_Swimming-Pool-Night-HR-desktop.jpg","imgSrc":{"label":"Somerset 官網","url":"https://www.discoverasr.com/en/somerset-serviced-residence/malaysia/somerset-medini-iskandar-puteri"},"price":"Somerset Medini 約 RM322／晚；Fraser Place 從 S$111 起","priceNote":"服務式公寓，有廚房與洗衣，3 房可住 6 人。非過年價，查證 2026-11-02","highlights":["走路 5 分鐘到樂高樂園、到 JPO 約 23 分：阿媽的樂高＋提夫與乃瑜的 Outlet 都在附近","公寓式有廚房、微波爐、大冰箱，兩家同住最方便","往新加坡走第二通道（Tuas）10–15 分，比 Woodlands 快"],"who":"小孩（樂高＋泳池）、長輩（空間大不必換房）、怕熱（旁邊 Mall of Medini 吹冷氣）","tips":[{"t":"ahappymum：家庭向、離樂高一個石頭距離、空間大又乾淨。","u":"https://www.ahappymum.com/2017/10/review-of-somerset-medini-iskandar.html"},{"t":"Trip.com 旅客：Fraser 3 房單位很適合大家庭、早餐出乎意料好。","u":"https://www.trip.com/hotels/nusajaya-hotel-detail-21149049/fraser-place-puteri-harbour"}],"warn":"離市區／CIQ 約 30–40 分；周邊餐廳少（多靠商場／GrabFood）；早餐偏簡式"}]},{"id":"seafood","title":"漁村海鮮去哪吃？","hint":"老爸指定・先電話確認過年有沒有開","note":"三家都查不到 2027 春節營業公告，出發前務必先打電話。海鮮多為秤重計價，點之前先問當日價格。","options":[{"key":"rengit","level":"漁村味最強","name":"A・四灣島 Sungai Rengit「龍蝦村」（翡翠園／龍皇）","img":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4H69oRsZTJ2CXQAy_8oAbRGSl_SVbJWRddYWLCx3UVyh3PcK9kNIByGnlcduqCBoCTjhUKmK9fmlWrVXBomR7IMO-UUyL-qcCoRxlx7qP32j5t044X9pT67pWSMdc-i-slrCLXbciwvU/w1200-h630-p-k-no-nu/IMG_5013.HEIC","imgSrc":{"label":"Our Travel Itinerary（食記）","url":"https://www.ourtravelitinerary.com/2019/12/desaru-restaurant-super-lobster-review.html"},"price":"人均約 RM80–150（龍皇實測 RM150／人）","priceNote":"龍蝦秤重約 RM110／kg、一尾上湯澳龍約 RM176.8。查證 2026-11-02","highlights":["活海鮮現撈，「龍蝦村」招牌：上湯／金沙／奶油龍蝦、花蟹、蘇東、娘惹蒸魚","翡翠園坐在海上的高腳餐廳，整排落地窗看海，隔壁 Yard & Co. 可先喝咖啡看夕陽","離迪沙魯只 30 分（從新山 1.5 小時），排度假村那幾天最順"],"who":"老爸的海鮮首選；翡翠園有冷氣、大圓桌，長輩小孩聚餐友善","tips":[{"t":"CNA Lifestyle 在地人指南：翡翠園與龍皇列邊佳蘭首選，招牌上湯龍蝦，還有在地人才知道的馬麥醬龍蝦。","u":"https://cnalifestyle.channelnewsasia.com/travel/best-seafood-restaurants-jb-johor-bahru-474116"},{"t":"HazelDiary：建議先打電話預訂活龍蝦，免得三團遊客同時到被訂光。","u":"https://hazeldiary.com/2022/05/jade-garden-seafood-restaurant-sungai-rengit-pengerang-johor"}],"warn":"2027 春節營業未查證（翡翠園 +60 7-826 5460，過去慣例週一休）；海鮮秤重點前先問價；建議自駕或包車"},{"key":"kukup","level":"水上人家最美","name":"B・龜咯 Kukup 水上漁村（海晶／龜咯食堂）","img":"https://belly-gone.fit/content/images/size/w1272/2024/09/kukup---baby-squid-1.jpg","imgSrc":{"label":"belly-gone.fit（食記）","url":"https://belly-gone.fit/eating-fresh-seafood-in-kukup-malaysia"},"price":"人均未查證（舊資料整桌 RM60–157）","priceNote":"屬中價位；查證 2026-11-02","highlights":["海上高腳屋餐廳，邊吃邊看馬六甲海峽與日落（號稱亞洲大陸最南端漁村）","家常南洋海鮮：炸小卷、sambal lala、麥片蝦、招牌海晶炒米粉","車可以直接開進餐廳停車位，不必在大太陽下走遠"],"who":"喜歡漁村氛圍的人；可坐室內，但高腳屋木板道濕滑，長輩小孩穿涼鞋","tips":[{"t":"Lemon8 在地常客：推薦麥片蝦、sambal lala、sambal 空心菜，水上座位看日落最棒。","u":"https://sg.trip.com/moments/kukup-1453323"},{"t":"Trip.com 指南：想坐臨海第一排建議 5 點前入座；有些店只收現金。","u":"https://sg.trip.com/moments/kukup-1453323"}],"warn":"離迪沙魯最遠（估 2.5–3 小時、方向相反），建議排在新山那幾天走西線；2027 春節營業未查證（海晶 +60 7-696 0259）"},{"key":"nelayan","level":"離度假村最近","name":"C・迪沙魯海邊 Nelayan Seafood By The Coast","img":"https://i0.wp.com/mitsueki.sg/wp-content/uploads/2024/10/MitsuekiTravels-3D2N-Hard-Rock-Desaru-Coast-Getaway-Day-2-x-Adventure-Waterpark-Desaru-x-Nelayan-Seafood-By-The-Coast-22-Sept-2024.jpg?fit=700%2C500&ssl=1","imgSrc":{"label":"mitsueki（2024 實訪）","url":"https://mitsueki.sg/2024/10/23/mitsuekitravels-3d2n-hard-rock-desaru-coast-getaway-day-2-x-adventure-waterpark-desaru-x-nelayan-seafood-by-the-coast-22-sept-2024"},"price":"人均約 RM40–60","priceNote":"點石斑／龍蝦會飆高（部落格實測整桌 RM448）。查證 2026-11-02","highlights":["海景第一排，就在度假村海灘邊，餐前餐後可走去沙灘玩鞦韆","有室內冷氣位；招牌金絲蝦、XO 炒飯、辣椒蟹，中文菜單、無豬肉","離水上樂園 6 分、各度假村 10 分內，最適合排在玩水那天的晚上"],"who":"最適合怕熱與長輩小孩：有冷氣、車程最短、不必長途拉車","tips":[{"t":"thetravelintern：推薦金絲蝦，提醒多數海鮮按當日市價，點前先問價。","u":"https://thetravelintern.com/things-to-do-in-desaru"},{"t":"mitsueki 實訪：點石斑軟嫩好吃，整桌 RM448，貴魚會拉高帳單。","u":"https://mitsueki.sg/2024/10/23/mitsuekitravels-3d2n-hard-rock-desaru-coast-getaway-day-2-x-adventure-waterpark-desaru-x-nelayan-seafood-by-the-coast-22-sept-2024"}],"warn":"2027 春節營業未查證（+60 7-833 8803）；Google 評分約 3.6（評價兩極在服務與價格）；點前務必問價"}]},{"id":"sgday","title":"新加坡一日怎麼玩？","hint":"可選分頭日・只有乃瑜、卞想去","note":"重要：新山–新加坡 RTS 捷運延到 2027 年 2 月底才通車，過年期間搭不到，只能走陸路關卡（火車／巴士／包車），過年關卡可能塞 4–8 小時。建議排在新山市區那幾天，不要排在迪沙魯那 3 晚。","options":[{"key":"sgA","level":"最不怕熱","name":"A・濱海灣花園＋星耀樟宜","img":"https://commons.wikimedia.org/wiki/Special:FilePath/Supertree_Grove,_Gardens_by_the_Bay.jpg","imgSrc":{"label":"Wikimedia Commons","url":"https://commons.wikimedia.org/wiki/File:Supertree_Grove,_Gardens_by_the_Bay.jpg"},"price":"2 人一天約 S$150–200（門票 S$16–92）","priceNote":"花穹＋雲霧林成人 S$46、兒童 S$32；擎天樹燈光秀與雨漩渦免費。查證 2026-11-02","highlights":["雲霧林室內瀑布＋侏羅紀主題，全程冷氣，怕熱族救星","擎天樹燈光秀 Garden Rhapsody 每天 19:45／20:45，免費","星耀樟宜 40 公尺室內瀑布，免費看，晚上有水舞秀"],"who":"怕熱 ★★★★★、長輩 ★★★★、小孩 ★★★★（小班推車可行）","tips":[{"t":"TripAdvisor：燈光秀只有 10–15 分鐘但很擠，建議提前 10–15 分到。","u":"https://www.tripadvisor.com/Attraction_Review-g294265-d20088625-Reviews-Garden_Rhapsody-Singapore.html"}],"warn":"過年景點照常但人很多；非居民票價比居民貴 3–4 成；護照要帶著（效期建議 6 個月以上）"},{"key":"sgB","level":"小孩最愛","name":"B・聖淘沙（環球影城／海灘＋纜車）","img":"https://commons.wikimedia.org/wiki/Special:FilePath/Universal_Globe_Singapore.jpg","imgSrc":{"label":"Wikimedia Commons","url":"https://commons.wikimedia.org/wiki/File:Universal_Globe_Singapore.jpg"},"price":"玩環球影城 2 人約 S$250–320","priceNote":"USS 2 月屬旺季：成人 S$83、兒童 S$69、未滿 4 歲免費；纜車成人 S$35。查證 2026-11-02","highlights":["環球影城 Minion Land 新園區＋七大主題區","Siloso 海灘玩沙玩水免費，小孩放電；島上有免費海灘接駁車","纜車跨港看城市天際線，黃昏最美"],"who":"小孩 ★★★★★、長輩 ★★（只走海灘＋纜車可行）、怕熱 ★★（戶外排隊久）","tips":[{"t":"TripAdvisor 2026 多筆：旺季一項設施排 90 分–3 小時，建議開園就到、先玩熱門的。","u":"https://www.tripadvisor.com/Attraction_Review-g294264-d2439664-Reviews-Universal_Studios_Singapore-Sentosa_Island_Singapore.html"},{"t":"Reddit：連假過關「非常早」出發，有人排到 3 小時。","u":"https://www.reddit.com/r/askSingapore/comments/1lxrh2w/whats_the_best_way_to_cross_from_sg_to_jb_on_a/"}],"warn":"走路多（整天站走 8–10 小時），小班要推車；戶外很曬；建議線上先買票，過年屬全年最擠時段之一"},{"key":"sgC","level":"最有年味・最省錢","name":"C・牛車水過年＋魚尾獅公園","img":"https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_New_Year_market_in_Singapore_Chinatown_horizontal.jpg","imgSrc":{"label":"Wikimedia Commons","url":"https://commons.wikimedia.org/wiki/File:Chinese_New_Year_market_in_Singapore_Chinatown_horizontal.jpg"},"price":"2 人一天約 S$60–90（門票幾乎免費）","priceNote":"金沙 SkyPark 觀景台成人 S$35（可選）。查證 2026-11-02","highlights":["牛車水過年燈飾＋年貨大街，最有農曆新年氣氛（除夕有倒數活動）","佛牙寺龍華院：唐朝式外觀、有冷氣，長輩喜歡","魚尾獅公園免費、24 小時開放，經典拍照點"],"who":"想感受年味 ★★★★★、長輩 ★★★★、怕熱 ★★（戶外多）、小孩 ★★（沒遊樂設施）","tips":[{"t":"Mimi韓 牛車水攻略：早上或傍晚來，中午躲熟食中心或佛牙寺吹冷氣。","u":"https://mimigo.tw/singapore-chinatown"},{"t":"新加坡旅遊局：牛車水是過年的視覺中心，建議避開初一當天下午最擠時段。","u":"https://www.visitsingapore.com/whats-happening/all-happenings/festivals/chinese-new-year/"}],"warn":"初一（2/6）牛車水人山人海，過年關卡尖峰可排 4–8 小時；熟食中心很多攤休初一初二，甚至休一週"}]},{"id":"lego","title":"要不要排樂高樂園？","hint":"半天／一天／不排","note":"票價為官網牌價（查證 2026-11-02）：單園成人 from RM205、兒童 from RM175；線上促銷日票 from RM69 起。3 歲以下免費。主題園週三休、水上園週二休（公共假期除外）。","options":[{"key":"half","level":"半天","name":"排半天（4–5 小時）","img":"https://upload.wikimedia.org/wikipedia/commons/e/ed/Legoland_Malaysia_Resort.jpg","imgSrc":{"label":"Wikimedia Commons","url":"https://commons.wikimedia.org/wiki/File:Legoland_Malaysia_Resort.jpg"},"price":"單園成人 from RM205、兒童 from RM175","priceNote":"線上促銷日票 from RM69 起。查證 2026-11-02，2027 過年票價未公布","highlights":["半天實務上只能玩單園：主題樂園走重點區，或只泡水上樂園","適合怕熱、中午要躲室內的節奏（可以先玩早上 10:00–14:00）","水上樂園有 20+ 條滑道，也有 3 歲以下的 DUPLO 戲水區"],"who":"小五最盡興；小一、中班玩 LEGO City 與 DUPLO；小班玩幼幼區與戲水區","tips":[{"t":"Girl Eat World 家族攻略：水上樂園半天（14:00–18:00）剛好，主題樂園要一整天。","u":"https://girleatworld.net/legoland-malaysia-travel-guide"}],"warn":"門票一票一日、單次入場，離開就不能再進去；中午很曬，戶外設施下雨或大風會停開"},{"key":"full","level":"一整天","name":"排一整天（10:00–18:00）","img":"https://upload.wikimedia.org/wikipedia/commons/e/ed/Legoland_Malaysia_Resort.jpg","imgSrc":{"label":"Wikimedia Commons","url":"https://commons.wikimedia.org/wiki/File:Legoland_Malaysia_Resort.jpg"},"price":"想兩園都玩：雙園成人 from RM285、三園 from RM345","priceNote":"兩園通常要拆兩天。查證 2026-11-02","highlights":["社群一致建議：主題樂園要玩滿開園到閉園一整天","可加 SEA LIFE 水族館（約 1 小時就夠）","園區大、推車友善，餐廳與室內區可避暑"],"who":"小孩（4 位）最愛；大人可看 Miniland；阿媽較適合 Miniland 與 SEA LIFE","tips":[{"t":"Klook 旅客：一天玩主題樂園＋SEA LIFE，另一天玩水上樂園。","u":"https://www.klook.com/en-US/activity/7713-legoland-admission-ticket-johor-bahru"}],"warn":"過年是樂高的重點檔期（往年除夕到初三為高峰），機動遊樂排隊久，建議一開園就進場"},{"key":"skip","level":"不排","name":"這次不排樂高","img":"","price":"省下 RM175–345／人","priceNote":"查證 2026-11-02","highlights":["迪沙魯 Adventure Waterpark 已經是水上樂園，性質相近可二選一","省下的時間可以排 JPO Outlet、按摩，或留在度假村放空","樂高離 Puteri Harbour 僅 4–9 分車程，住那區的話可以臨時決定"],"who":"想把天數留給海邊放空、不想再拉車的人","tips":[{"t":"Klook 旅客：水上樂園其實可以玩一整天，樂高與迪沙魯水樂園取捨看你們。","u":"https://www.klook.com/en-US/activity/7713-legoland-admission-ticket-johor-bahru"}],"warn":"少了乃瑜「一定要的水上樂園」這個加分項；不過迪沙魯已有 Adventure Waterpark"}]},{"id":"extra","title":"加分題：還想加什麼？","hint":"可跳過","note":"提夫與乃瑜想逛 Outlet、提夫想按摩。","options":[{"key":"jpo","level":"想逛街","name":"JPO 柔佛名牌城 Outlet","img":"https://upload.wikimedia.org/wikipedia/commons/0/08/Johor_Premium_Outlets.jpg","imgSrc":{"label":"Wikimedia Commons","url":"https://commons.wikimedia.org/wiki/File:Johor_Premium_Outlets.jpg"},"price":"免門票，全館常態 25–65% off（季末可到 80%）","priceNote":"離新山市區 30–40 分；每日 10:00–22:00。查證 2026-11-02","highlights":["約 150 家名牌店：Coach、BOSS、Armani Exchange、Michael Kors、Polo、Nike 等","可逛 3–4 小時；離樂高約 25 分，可跟樂高排同一天","折扣最多的時段就是聖誕、農曆新年、開齋節"],"who":"提夫、乃瑜想買名牌；全家想吹冷氣逛街也行","tips":[{"t":"The Smart Local：建議留 3–4 小時逛＋吃。","u":"https://thesmartlocal.com/read/johor-premium-outlets/"},{"t":"旅宿指南：市區到 JPO 約 30 分、Grab 約 RM65–85，一到就先預約回程車。","u":"https://southern-homestay.com/blog/johor-premium-outlets-guide"}],"warn":"戶外開放式賣場、中午很曬，建議傍晚去；2027 過年班表未查證；初一初二不少店家休或晚開"},{"key":"spa","level":"放鬆","name":"按摩 SPA（適合長輩）","img":"https://upload.wikimedia.org/wikipedia/commons/b/b4/Thai_massage.jpg","imgSrc":{"label":"Wikimedia Commons（示意圖）","url":"https://commons.wikimedia.org/wiki/File:Thai_massage.jpg"},"price":"Walea 足底 60 分 RM79、全身 60 分 RM99；Breeze Spa（飯店內）60 分 RM180","priceNote":"價格多未含 8% SST；查證 2026-11-02","highlights":["Breeze Spa 在 Amari 飯店內：安靜乾淨、獨立房，長輩最安心","Walea Spa：CP 值高，足底按摩送藥浴泡腳與魚粥","Y Spa 御用中藥足浴（38 種藥材）養生，適合阿媽與爸媽"],"who":"爸媽／阿媽；怕熱的人（室內冷氣）","tips":[{"t":"Lemon8 實測：Walea 90 分按摩到位，精品店要提前 2–3 天預約。","u":"https://lemon8-app.com/@bubblyblooom/7523161864033829383?region=sg"}],"warn":"10 人團體＋過年高峰，至少提前 1 週預約並確認過年有開；有 jacuzzi 的店樓梯陡，不建議高齡者單獨使用；先問「nett（含稅）價」"},{"key":"none","level":"都可以","name":"都不用，留給放空","img":"","price":"—","priceNote":"","highlights":["時間留給泳池、海邊、睡到自然醒","行程鬆一點，小孩也不會太累"],"who":"想慢慢玩的人（問卷多數人選這個節奏）","tips":[],"warn":""}]}],"calendar":{"people":["提夫","xo","老爸","阿媽","乃瑜","卞"],"days":[{"k":"02-02","l":"2/2<br>二"},{"k":"02-03","l":"2/3<br>三"},{"k":"02-04","l":"2/4<br>四"},{"k":"02-05","l":"2/5<br>除夕"},{"k":"02-06","l":"2/6<br>初一"},{"k":"02-07","l":"2/7<br>初二"},{"k":"02-08","l":"2/8<br>初三"},{"k":"02-09","l":"2/9<br>二"},{"k":"02-10","l":"2/10<br>三"},{"k":"02-11","l":"2/11<br>四"},{"k":"02-12","l":"2/12<br>五"},{"k":"02-13","l":"2/13<br>六"}]}};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const A={votes:{},days:[],name:''};   // 我的選擇
+let TALLY={};                          // 目前票數 {qid:{key:[names]}}
+let DAYTALLY={};                       // {name:[dates]}
+
+/* ---------- 畫頁面 ---------- */
+function head(){
+  $('#h1').innerHTML=esc(DATA.title||'新山＋迪沙魯，一起去投票');
+  $('#hs').textContent=DATA.subtitle||'';
+  $('#hd').textContent=DATA.dates||'';
+  $('#sum').textContent=DATA.summary||'';
+  $('#sumul').innerHTML=(DATA.summaryPoints||[]).map(t=>`<li>${esc(t)}</li>`).join('');
+  $('#skeletonSub').textContent=DATA.skeletonHint||'';
+  $('#tl').innerHTML=(DATA.skeleton||[]).map((d,i)=>`
+    <div class="item"><div class="dot">${esc(d.tag||('D'+(i+1)))}</div>
+    <div class="body"><b>${esc(d.title)}</b><span class="d">${esc(d.date||'')}</span>
+    ${d.text?`<p>${d.text}</p>`:''}${d.split?`<span class="split">🔀 ${esc(d.split)}</span>`:''}</div></div>`).join('');
+}
+function picture(o){
+  if(!o.img) return `<div class="pic"></div>`;
+  const src=o.imgSrc&&o.imgSrc.url?`<a class="src" target="_blank" rel="noopener" href="${esc(o.imgSrc.url)}">圖：${esc(o.imgSrc.label||'來源')}</a>`:'';
+  return `<div class="pic"><img loading="lazy" src="${esc(o.img)}" alt="${esc(o.name)}" onerror="this.parentNode.style.display='none'">${o.level?`<span class="lvl">${esc(o.level)}</span>`:''}${src}</div>`;
+}
+function cards(){
+  $('#qs').innerHTML=(DATA.questions||[]).map((q,qi)=>{
+    const opts=(q.options||[]).map((o,oi)=>{
+      const tips=(o.tips||[]).map(t=>t.u?`<div>💬 ${esc(t.t)} <a href="${esc(t.u)}" target="_blank" rel="noopener">看心得</a></div>`:`<div>💬 ${esc(t.t)}</div>`).join('');
+      return `<div class="opt" id="o-${q.id}-${o.key}">
+        ${picture(o)}
+        <div class="in">
+          <h4>${esc(o.name)}</h4>
+          <p class="price">${esc(o.price||'')}${o.priceNote?`<small>${esc(o.priceNote)}</small>`:''}</p>
+          <ul>${(o.highlights||[]).map(h=>`<li>${esc(h)}</li>`).join('')}</ul>
+          ${o.who?`<p class="who">👨‍👩‍👧‍👦 ${esc(o.who)}</p>`:''}
+          ${tips?`<div class="tips">${tips}</div>`:''}
+          ${o.warn?`<p class="warn">⚠️ ${esc(o.warn)}</p>`:''}
+          <p class="votes" id="v-${q.id}-${o.key}"></p>
+          <button class="pick" data-q="${q.id}" data-k="${o.key}">投這個</button>
+        </div></div>`}).join('');
+    return `<div class="q"><div class="qtitle"><h3>${qi+1}. ${esc(q.title)}</h3><span>${esc(q.hint||'')}</span></div>
+      ${q.note?`<p class="sub" style="margin:0 0 4px">${esc(q.note)}</p>`:''}
+      <div class="strip">${opts}</div>
+      <p class="swipe">左右滑看其他選項 →</p></div>`}).join('');
+  document.querySelectorAll('.pick').forEach(b=>b.onclick=()=>{
+    const q=b.dataset.q,k=b.dataset.k;
+    if(A.votes[q]===k) delete A.votes[q]; else A.votes[q]=k;
+    paint(); count();
+  });
+}
+function cal(){
+  if(!DATA.calendar) return;
+  const d=DATA.calendar.days||[], people=DATA.calendar.people||[];
+  const rows=people.map(p=>`<tr data-n="${esc(p)}"><td class="nm">${esc(p)}</td>`+
+    d.map(x=>`<td class="c" data-d="${esc(x.k)}"><i></i></td>`).join('')+`</tr>`).join('');
+  $('#qs').insertAdjacentHTML('beforeend',
+    `<div class="q" id="calQ"><div class="qtitle"><h3>${DATA.questions.length+1}. 你哪幾天在？</h3><span>點格子</span></div>
+     <p class="sub">先點自己的名字那一列（藍色），再點你會在新山／迪沙魯的日期；已經有人點過的會自動顯示。</p>
+     <div class="cal"><table><thead><tr><th class="nm">誰</th>${d.map(x=>`<th>${esc(x.l).replace(/&lt;br&gt;/g,"<br>")}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>
+     <p class="legend">藍色＝那天會在；初二 2/6 之後多數人還在。</p></div>`);
+  document.querySelectorAll('tr[data-n]').forEach(tr=>tr.querySelectorAll('td.c').forEach(td=>td.onclick=()=>{
+    A.name=A.name||$('#name').value.trim(); A.me=tr.dataset.n;
+    document.querySelectorAll('#calQ tr').forEach(x=>x.classList.toggle('me',x.dataset.n===A.me));
+    const day=td.dataset.d, i=A.days.indexOf(day);
+    if(i<0) A.days.push(day); else A.days.splice(i,1);
+    paintCal(); count();
+  }));
+}
+function paintCal(){
+  document.querySelectorAll('#calQ tr').forEach(tr=>{
+    const me=tr.dataset.n, mine=A.me===me;
+    tr.querySelectorAll('td.c').forEach(td=>{
+      const d=td.dataset.d;
+      let on=A.days.includes(d)&&mine;
+      if(!mine) on=(DAYTALLY[me]||[]).includes(d);
+      td.classList.toggle('on',on);
+    });
+  });
+}
+function paint(){
+  document.querySelectorAll('.opt').forEach(el=>{
+    const [q,k]=[el.id.split('-')[1],el.id.split('-').slice(2).join('-')];
+    el.classList.toggle('sel',A.votes[q]===k);
+    const b=el.querySelector('.pick'); if(b) b.textContent=A.votes[q]===k?'✓ 你投這個':'投這個';
+  });
+  (DATA.questions||[]).forEach(q=>(q.options||[]).forEach(o=>{
+    const el=document.getElementById('v-'+q.id+'-'+o.key); if(!el) return;
+    const names=(TALLY[q.id]||{})[o.key]||[];
+    el.innerHTML=names.length?`目前 <b>${names.length}</b> 票：${esc(names.join('、'))}`:'還沒有人投';
+  }));
+}
+function count(){
+  const n=Object.keys(A.votes).length+(A.days.length||A.me?1:0);
+  const total=(DATA.questions||[]).length+(DATA.calendar?1:0);
+  $('#cnt').textContent=`已選 ${n} / ${total} 題`;
+  $('#send').disabled=!(n>0&&$('#name').value.trim());
+}
+$('#name').oninput=()=>{A.name=$('#name').value.trim();count()};
+
+/* ---------- 讀票數 ---------- */
+function parseVotes(rows){
+  const last={};
+  (rows||[]).forEach(r=>{
+    if(!String(r.text||'').startsWith('【投票】')) return;
+    if(String(r.name).startsWith('測試')) return;      // 驗收用的測試票不算
+    last[r.name]=r;
+  });
+  TALLY={}; DAYTALLY={};
+  Object.values(last).forEach(r=>{
+    const a=r.answers||{}, v=a.votes||{};
+    Object.entries(v).forEach(([q,k])=>{
+      TALLY[q]=TALLY[q]||{}; (TALLY[q][k]=TALLY[q][k]||[]).push(r.name);
+    });
+    if(a.days&&a.days.length) DAYTALLY[r.name]=a.days;
+  });
+  const names=Object.keys(last);
+  $('#bar').dataset.n=names.length;
+}
+function load(){
+  if(!ENDPOINT) return;
+  fetch(ENDPOINT).then(r=>r.json()).then(j=>{parseVotes(j.rows);paint();paintCal()}).catch(()=>{});
+}
+
+/* ---------- 送出 ---------- */
+function submit(){
+  const name=$('#name').value.trim();
+  if(!name) return $('#name').focus();
+  A.name=name;
+  const lines=Object.entries(A.votes).map(([q,k])=>{
+    const Q=(DATA.questions||[]).find(x=>x.id===q); const o=(Q.options||[]).find(x=>x.key===k);
+    return `・${Q.title}：${o?o.name:k}`;
+  });
+  if(A.days.length) lines.push(`・我在的日期：${A.days.slice().sort().map(x=>{const a=x.split('-');return parseInt(a[1],10)+'/'+parseInt(a[2],10)}).join('、')}${A.me?`（${A.me}）`:''}`);
+  const text=`【投票】${name}\n`+lines.join('\n');
+  const body=JSON.stringify({name,fam:'行程投票',text,answers:{kind:'vote',votes:A.votes,days:A.days,me:A.me||''}});
+  $('#send').disabled=true; $('#send').textContent='送出中⋯';
+  fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body})
+    .then(r=>r.text()).then(t=>{
+      if(t.trim()!=='ok') throw 0;
+      $('#doneBox').innerHTML=`<div class="done"><div class="big">🎉</div><h3>投好了，謝謝 ${esc(name)}！</h3>
+        <p>你的票已經存進去，下面會即時顯示大家的票數。</p><pre id="my" style="text-align:left;white-space:pre-wrap;font-family:inherit;font-size:14px;background:#f7fbfb;border-radius:12px;padding:12px;margin:14px 0 0">${esc(text)}</pre></div>`;
+      $('#send').textContent='再送一次'; $('#send').disabled=false;
+      load();
+      $('#doneBox').scrollIntoView({behavior:'smooth',block:'center'});
+    }).catch(()=>{
+      $('#send').textContent='沒送出，再試一次'; $('#send').disabled=false;
+      $('#doneBox').innerHTML=`<div class="done"><div class="big">⚠️</div><h3>沒有送出成功</h3><p>可能是網路不穩，請再按一次「送出我的投票」。</p></div>`;
+    });
+}
+$('#send').onclick=submit;
+
+head(); cards(); cal(); paint(); count(); load();
+</script>
+</body>
+</html>
