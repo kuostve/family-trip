@@ -32,10 +32,11 @@
 const ENDPOINT='https://script.google.com/macros/s/AKfycbxnKGlB0GbRlPYoNljLPUZcbxWNN1htLBf37LVHWDAYSjVT813_eFzJaz64uAW5J5xD1Q/exec';
 const ACTS={lego:'樂高樂園',indoor:'室內樂園',water:'水上樂園',beach:'海邊度假村',sg:'新加坡一日',seafood:'漁村海鮮',local:'在地小吃',shop:'Outlet／商場',oldtown:'老街廟宇',spa:'按摩',farm:'農場螢火蟲',diy:'料理手作'};
 const $=s=>document.querySelector(s);
+const NAME_ALIAS={'阿媽':'老媽'};  // 提夫 11/2：顯示名稱改成老媽（試算表原始資料不動）
 const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 if(!ENDPOINT){$('#sub').textContent='還沒接上試算表。'}
 else fetch(ENDPOINT).then(r=>r.json()).then(({rows})=>{
-  const last={}; rows.filter(r=>!String(r.name).startsWith('測試')&&!String(r.text||'').startsWith('【投票】')).forEach(r=>last[r.name]=r);  // 同一個人填兩次只算最後一次；排除行程投票紀錄
+  const last={}; rows.map(r=>(r.name=NAME_ALIAS[r.name]||r.name,r)).filter(r=>!String(r.name).startsWith('測試')&&!String(r.text||'').startsWith('【投票】')).forEach(r=>last[r.name]=r);  // 同一個人填兩次只算最後一次；排除行程投票紀錄
   const L=Object.values(last).sort((a,b)=>new Date(b.time)-new Date(a.time));
   $('#sub').textContent=L.length?`已經有 ${L.length} 個人填了`:'還沒有人填，當第一個吧！';
   const c={}; L.forEach(r=>(r.answers.acts||[]).forEach(k=>c[k]=(c[k]||0)+1));
