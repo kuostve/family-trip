@@ -195,7 +195,7 @@ footer{font-size:.72rem;color:var(--mut);margin:26px 0 20px;text-align:center;li
   <picture><img alt="迪沙魯海灘" fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/DesaruBeach.JPG/1920px-DesaruBeach.JPG"></picture>
   <p class="hcr">Desaru Beach · Jpatokal · CC BY-SA 4.0</p>
   <div class="hcap">
-    <p class="hey">MMXXVII · LUNAR NEW YEAR</p>
+    
     <h1 class="htl">南洋<i>·</i>過好年<span class="seal">春</span></h1>
     <p class="hsub"><span class="gd">2.02</span><em>—</em><span class="gd">2.13</span>　十個人・十二天</p>
     <span class="hrl"></span>
@@ -292,11 +292,11 @@ function photos(o){
   if(!o.photos||!o.photos.length) return '';
   return `<div class="strip">`+o.photos.map(p=>`<div class="pic"><img loading="lazy" src="${esc(p.u)}" alt="${esc(p.c||'')}" onerror="this.closest('.pic').style.display='none'"><small>${esc(p.c||'')}${p.s?` · ${esc(p.s)}`:''}</small></div>`).join('')+`</div>`;
 }
-function stayBox(o){
+const P2OK=o=>!!(o.stay&&o.stay.p2)&&!/沒有適合|沒有另外查|不適用|不建議|請走 3 間|塞不下|同左|見 B 卡/.test(o.stay.p2);
+function stayBox(o,sec){
   if(!o.stay) return '';
   return `<div class="plans">
-    <div class="plan"><h5>方案一・3 間房</h5>${o.stay.p3}</div>
-    <div class="plan"><h5>方案二・2 間大房</h5>${o.stay.p2}</div></div>`;
+    ${P2OK(o)&&!(sec&&['d4','h'].includes(sec.id))?`<div class="plan"><h5>方案一・3 間房</h5>${o.stay.p3}</div><div class="plan"><h5>方案二・2 間大房</h5>${o.stay.p2}</div>`:`<div class="plan"><h5>${sec&&['d4','h'].includes(sec.id)?'怎麼安排':'怎麼住・3 間房'}</h5>${o.stay.p3}</div>`}</div>`;
 }
 function costBox(o){
   if(!o.cost) return '';
@@ -323,7 +323,7 @@ function optCard(sec,o){
     <div class="sb">
       ${photos(o)}
       ${o.intro?`<p style="font-size:.88rem;color:var(--ink2);margin:6px 0 8px">${o.intro}</p>`:''}
-      ${stayBox(o)}
+      ${stayBox(o,sec)}
       ${costBox(o)}
       ${o.bk?`<a class="bkl" href="${o.bk.u}" target="_blank" rel="noopener">${esc(o.bk.t)} ↗</a>`:''}
       ${o.meta?`<div class="meta">${Object.entries(o.meta).filter(([k])=>k!=='評價').map(([k,v])=>`<div><span>${esc(k)}：</span>${v}</div>`).join('')}</div>`:''}
