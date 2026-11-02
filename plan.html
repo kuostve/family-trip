@@ -430,14 +430,14 @@ function summaryText(){
       const pool=sec.groups?sec.groups.flatMap(g=>g.items):sec.items;
       L.push(`・${sec.title}：`+sel.map(k=>(pool.find(x=>x.key===k)||{}).n).join('、'));}
   });
-  if(S.days.length) L.push(`・我在的時段：`+S.days.slice().sort().map(k=>{const x=DATA.days.find(d=>d.k===k);return x?x.l.replace('<br>',' '):k}).join('、'));
+  if(false) L.push(`・我在的時段：`+S.days.slice().sort().map(k=>{const x=DATA.days.find(d=>d.k===k);return x?x.l.replace('<br>',' '):k}).join('、'));
   return `【投票】${S.who||'（沒選名字）'}\n`+L.join('\n');
 }
 $('#go').onclick=()=>{
   if(!S.who){ $('#who').scrollIntoView({behavior:'smooth'}); alert('先選你是誰'); return; }
   const text=summaryText();
   const body=JSON.stringify({name:S.who,fam:S.fam||'',text,
-    answers:{kind:'vote',who:S.who,fam:S.fam,votes:S.votes,multi:S.multi,plan:S.plan,days:S.days}});
+    answers:{kind:'vote',who:S.who,fam:S.fam,votes:S.votes,multi:S.multi,plan:S.plan,days:[]}});
   $('#go').disabled=true; $('#go').textContent='送出中⋯';
   fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body})
     .then(r=>r.text()).then(t=>{
