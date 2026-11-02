@@ -228,12 +228,6 @@ footer{font-size:.72rem;color:var(--mut);margin:26px 0 20px;text-align:center;li
 
 <div id="sections"></div>
 
-<section class="sec" id="days">
-  <h2>你哪幾段在？</h2>
-  <p class="lead">點<b>自己那一列</b>的格子。別人那幾列只能看。</p>
-  <div class="cal"><table class="calt" id="cal"></table></div>
-  <p class="legend">深色＝那段會在。除夕 2/5（五）、初一 2/6（六）。前段怎麼排還沒定，2/4–2/5 那段先照你想在哪邊點。</p>
-</section>
 
 <div id="detail"></div>
 
@@ -277,8 +271,7 @@ function setWho(n){
 function save(){try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}}
 
 /* ---------- 導覽 ---------- */
-$('#nav').innerHTML=DATA.sections.map(s=>`<a class="cp" href="#${s.id}">${esc(s.nav)}</a>`).join('')
-  +`<a class="cp" href="#days">日期</a>`;
+$('#nav').innerHTML=DATA.sections.map(s=>`<a class="cp" href="#${s.id}">${esc(s.nav)}</a>`).join('');
 $$('#nav .cp').forEach(a=>a.onclick=e=>{e.preventDefault();const t=$(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})});
 
 /* ---------- 摘要 ---------- */
@@ -369,29 +362,8 @@ function chipsSection(sec){
     }).join('')}</div></section><div class="rule"></div>`;
 }
 /* ---------- 日曆 ---------- */
-function calRender(){
-  const d=DATA.days, people=DATA.people.map(p=>p.n);
-  $('#cal').innerHTML=`<thead><tr><th class="nm">誰</th>${d.map(x=>`<th>${x.l}</th>`).join('')}</tr></thead><tbody>`+
-    people.map(n=>`<tr data-n="${esc(n)}" class="${n===S.who?'mine':'other'}"><th class="nm">${(()=>{const pp=DATA.people.find(x=>x.n===n);return pp&&pp.img?`<img class="av sm" src="${pp.img}" alt="">`:''})()}${esc(n)}</th>`+
-      d.map(x=>`<td class="c" data-d="${esc(x.k)}"><i></i></td>`).join('')+`</tr>`).join('')+`</tbody>`;
-  $$('#cal tr[data-n]').forEach(tr=>tr.querySelectorAll('td.c').forEach(td=>td.onclick=()=>{
-    if(tr.dataset.n!==S.who){ if(!S.who) $('#who').scrollIntoView({behavior:'smooth'}); return; }
-    const k=td.dataset.d, i=S.days.indexOf(k);
-    if(i<0) S.days.push(k); else S.days.splice(i,1);
-    save(); paintCal(); cost();
-  }));
-  paintCal();
-}
-function paintCal(){
-  $$('#cal tr[data-n]').forEach(tr=>{
-    const mine=tr.dataset.n===S.who;
-    tr.classList.toggle('mine',mine); tr.classList.toggle('other',!mine);
-    tr.querySelectorAll('td.c').forEach(td=>{
-      const on=mine?S.days.includes(td.dataset.d):(DAYTALLY[tr.dataset.n]||[]).includes(td.dataset.d);
-      td.classList.toggle('on',on);
-    });
-  });
-}
+function calRender(){}  /* 「你哪幾段在」已拿掉（patch_days） */
+function paintCal(){}
 /* ---------- 互動 ---------- */
 function bindVotes(){
   $$('.vbtn').forEach(b=>b.onclick=()=>{
