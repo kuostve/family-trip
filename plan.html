@@ -410,14 +410,15 @@ function cost(){
       sec.items.forEach(it=>{if(sel.includes(it.key)&&it.est){sub+=it.est}});
     if(sub){L.push([sec.nav+'（'+sel.length+' 項）',sub]); total+=sub;}
   });
-  $('#est').innerHTML=total?`<b>全團約 ${NF(total)}</b>每家約 ${NF(total/3)} ・ <u id="estMore">看明細</u>`
+  const NTS={d1:3,sg:3,d2:1}; let nts=0,room=0; DATA.sections.forEach(sec=>{const k=S.votes[sec.id]; const o=k&&sec.options&&sec.options.find(x=>x.key===k); if(o&&o.est&&NTS[sec.id]){nts+=NTS[sec.id]; room+=o.est.est3||0}});
+  $('#est').innerHTML=total?`<b>每位大人約 ${NF(total/6)}</b>${nts?`住 ${nts} 晚・平均每晚 ${NF(room/6/nts)}`:''} ・ <u id="estMore">看明細</u>`
     :`<b>還沒選度假村</b><u id="estMore">看明細</u>`;
   const m=$('#estMore'); if(m) m.onclick=()=>{
     const d=$('#detail');
     d.style.display=d.style.display==='block'?'none':'block';
-    d.innerHTML=`<h3>費用明細（現在價格估算）</h3><table>${L.map(([n,v])=>`<tr><td>${esc(n)}</td><td>${NF(v)}</td></tr>`).join('')}
-      <tr><td><b>合計</b></td><td><b>${NF(total)}</b></td></tr>
-      <tr><td>每家（3 戶）</td><td>${NF(total/3)}</td></tr></table>
+    d.innerHTML=`<h3>費用明細（每位大人，現在價格估算）</h3><p class="legend">每位大人＝全部錢 ÷ 6 位大人（小孩不另算）。度假村算第一志願。</p><table>${L.map(([n,v])=>`<tr><td>${esc(n)}</td><td>${NF(v/6)}</td></tr>`).join('')}
+      <tr><td><b>每位大人合計</b></td><td><b>${NF(total/6)}</b></td></tr>
+      <tr><td>全團 10 人（6 大 4 小）總共</td><td>${NF(total)}</td></tr></table>
       <p class="legend">不含機票、吃飯與個人購物；過年期間房價可能再貴，實際依訂房網為準。</p>`;
     if(d.style.display==='block') d.scrollIntoView({behavior:'smooth'});
   };
