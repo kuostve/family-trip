@@ -1,0 +1,1076 @@
+{
+ "rev": 3,
+ "name": "2027 過年南洋之旅",
+ "destination": "新加坡・新山・巴淡島（8 天 7 夜）",
+ "start": "2027-02-02",
+ "end": "2027-02-09",
+ "tz": "Asia/Singapore",
+ "travelers": {
+  "adults": 4,
+  "children": [
+   11,
+   4
+  ]
+ },
+ "localCurrency": "SGD",
+ "settleCurrency": "TWD",
+ "rates": {
+  "SGD": 25.62,
+  "MYR": 8.08,
+  "IDR": 0.001806,
+  "TWD": 1
+ },
+ "rateNote": "匯率為參考估值（open.er-api.com 2026-11-13：1 SGD＝25.62 TWD、3.1708 MYR、14,184 IDR；MYR、IDR 以 SGD 交叉換算），出發前請更新。",
+ "budget": null,
+ "source": "pages/family-trip/plan.html（2026-11-11 版）",
+ "note": "費用一律輸入整團總價，「每人」金額先不顯示（人數另議）。標「估」＝尚未預訂或價格訂前再查。",
+ "general": [
+  "護照效期要超過入境日 6 個月；台灣護照新加坡、馬來西亞免簽。",
+  "入境卡都是線上免費填，入境前 3 天內：新加坡 SG Arrival Card、馬來西亞 MDAC；印尼要另外辦 e-VOA，並填 All Indonesia 入境申報。每個人都要（小孩也要，可由大人代填）；坐船進新加坡也要填 SG Arrival Card。只用官網，小心收費代辦假網站。",
+  "時差：新加坡、馬來西亞同台灣；巴淡島（印尼西部時間）慢 1 小時。本頁所有時間一律用新加坡時間，印尼當地時間寫在備註；船票時間看訂票網站標示的當地時間。",
+  "貨幣：新幣 SGD、馬幣 MYR、印尼盾 IDR，三國都可刷卡，小攤販、計程車、小費備少量現金。三地都能用 Grab 叫車。",
+  "插座：新加坡、馬來西亞是英式三孔（G 型），印尼是歐式圓孔（C／F 型），帶萬用轉接頭。可買星、馬、印三國通用的 eSIM 或當地 SIM。",
+  "2 月是新加坡一年最乾的月份，平均最低約 25°C、最高約 31.5°C，一個月約 9 天下雨，多是短暫陣雨：帶輕便雨具、防曬、防蚊液；室內冷氣強，帶薄外套。",
+  "2027 年除夕是 2/5（五）、初一是 2/6（六）。新加坡 2/6–2/8 放假；印尼 2/5 集體休假、2/6 國定假日。除夕到初三很多小吃攤、店家休息或縮短營業，名店出發前再查。",
+  "緊急電話：新加坡報警 999、救護車 995；馬來西亞 999；印尼 112。台灣駐外急難：新加坡 +65 9638-9436（可用 WhatsApp）、馬來西亞 +60 19-656-9912、印尼 +62 811-984-676；聯絡不到時打外交部 +886-800-085-095。"
+ ],
+ "days": {
+  "2027-02-02": {
+   "title": "抵達新加坡・星耀樟宜瀑布・牛車水走春",
+   "who": "6 人（提夫家＋爸媽）",
+   "img": "img/pic-s1.jpg",
+   "alt": "新加坡牛車水新春燈會街道",
+   "credit": "Jakub Hałun · CC BY 4.0",
+   "tips": [
+    "新加坡嚴禁帶口香糖入境，香菸要申報；地鐵禁飲食、禁帶榴槤，罰款很重。",
+    "自來水可生飲，帶水壺。",
+    "牛車水新春燈飾晚上人多，小孩穿亮色衣服、約好走散集合點。"
+   ]
+  },
+  "2027-02-03": {
+   "title": "濱海灣花園冷室・午後飯店休憩・夜間水舞秀",
+   "who": "6 人（提夫家＋爸媽）",
+   "img": "img/pic-a22.jpg",
+   "alt": "濱海灣花園超級樹與雲霧林冷室",
+   "credit": "CEphoto, Uwe Aranas · CC BY-SA 3.0",
+   "tips": [
+    "濱海灣花園冷室門票建議官網先買；冷室內偏涼，長輩帶外套。",
+    "雲霧林現在是「侏羅紀世界」展，有很大的音效和閃光，4 歲小孩會怕的話，大人陪著走或先看花穹。",
+    "夜間動物園晚上蚊子多、會下雨，穿包鞋、帶防蚊液；園內不能用閃光燈。"
+   ]
+  },
+  "2027-02-04": {
+   "title": "跨境前往新山（姐夫安排）・姐夫家合流・入住 Hyatt Place",
+   "who": "6 → 10 人全體會合",
+   "img": "img/pic-f3.jpg",
+   "alt": "肉骨茶（示意，晚餐亞彬肉骨茶）",
+   "credit": "Chensiyuan · CC BY-SA 3.0",
+   "tips": [
+    "新馬陸路過關過年前後車多，提早出發；護照放手邊，MDAC 先填好。",
+    "新加坡到新山、新山用車由姐夫安排；若自己開車，要帶國際駕照＋台灣駕照，靠左行駛；只帶台灣駕照不行。",
+    "新馬價差大，新幣換馬幣在新山換比較划算。"
+   ]
+  },
+  "2027-02-05": {
+   "title": "華美早茶・柔佛古廟走春・全家除夕圍爐守歲",
+   "who": "10 人全體",
+   "img": "img/pic-a14.jpg",
+   "alt": "新山百年信仰中心柔佛古廟",
+   "credit": "Chainwit. · CC BY 4.0",
+   "tips": [
+    "除夕下午起很多店提早打烊，伴手禮與零食早點買。",
+    "發紅包（ang pao）用新鈔、偶數金額；避開 4。圍爐是家庭時間，到人家家裡帶個小禮（橘子成對）。",
+    "清真餐廳不能帶豬肉和酒進去。"
+   ]
+  },
+  "2027-02-06": {
+   "title": "初一拜年・11:30 渡輪到巴淡島・入住 Montigo",
+   "who": "10 人全體",
+   "img": "img/area-batam-1.jpg",
+   "alt": "巴淡島地標 Barelang 大橋（示意）",
+   "credit": "Annayu Maharani · CC BY-SA 4.0",
+   "tips": [
+    "建議搭 11:30（新山時間）船，10:30 前到碼頭辦出境；初一可能減班，前一天再跟船公司確認。新山沒有直達 Nongsa 的船，要在 Batam Centre 上岸再坐車。",
+    "到巴淡島先把手錶調慢 1 小時；碼頭外拉客計程車先講價，建議用 Grab／Gojek（要走出碼頭閘口 50–100 公尺上車）或請飯店付費接送。",
+    "印尼自來水不能生飲，刷牙也可用瓶裝水。"
+   ]
+  },
+  "2027-02-07": {
+   "title": "初二度假放空・泳池・海洋飛索探險",
+   "who": "10 人全體",
+   "img": "img/area-batam-3.jpg",
+   "alt": "巴淡名菜 Gonggong 海螺（示意）",
+   "credit": "alantankenghoe · CC BY 2.0",
+   "tips": [
+    "海邊紫外線很強，小孩戲水穿防曬衣、2 小時補擦防曬。",
+    "飛索有身高體重限制，現場先問；午後雷雨會暫停戶外設施。",
+    "印尼多數是穆斯林，參觀清真寺穿長褲長袖，遞東西用右手。"
+   ]
+  },
+  "2027-02-08": {
+   "title": "初三慢活海島・Harbour Bay 活海鮮大餐・Nagoya 按摩",
+   "who": "10 人全體",
+   "img": "img/area-batam-2.jpg",
+   "alt": "巴淡島 Harbour Bay 海濱海鮮",
+   "credit": "Exbeing · CC BY-SA 4.0",
+   "tips": [
+    "海鮮餐廳先問秤重單價（每公斤）再點，結帳核對重量。",
+    "按摩店選有標價的店，貴重物品不離身；晚上回程用叫車 App。",
+    "印尼盾面額大（10 萬、5 萬），付錢數清楚零。"
+   ]
+  },
+  "2027-02-09": {
+   "title": "初四分頭啟程：渡輪到新加坡再搭機返台／姐夫家渡輪回新山",
+   "who": "分兩路返家（6 人＋4 人）",
+   "img": "img/pic-s3.jpg",
+   "alt": "星耀樟宜（示意，回程樟宜機場）",
+   "credit": "Mike Peel · CC BY-SA 4.0",
+   "tips": [
+    "建議搭 09:30（印尼時間）Nongsa 開的船，08:30 前到碼頭；Montigo 有免費接駁到 Nongsapura 碼頭（約 5 分鐘），前一天跟櫃台約時間。",
+    "船到新加坡後去樟宜機場搭 15:45 長榮 BR216，留至少 3 小時；行李上限看船公司規定。",
+    "剩下的印尼盾在當地花完，台灣很難換回。",
+    "若全家決定多住 1 晚（2/10 回，9 天 8 夜）：Montigo 改訂 4 晚 NT$160,557（較 3 晚多 NT$31,885）；機票已訂 2/9 回，要先改票（每人改期費 NT$1,400＋服務費 NT$500，另補價差）。2/10 一樣搭 Nongsa 09:30（印尼時間）船。"
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "n01",
+   "date": "2027-02-02",
+   "start": "05:25",
+   "dur": 100,
+   "cat": "transport",
+   "name": "桃園機場第二航廈長榮櫃台報到",
+   "addr": "桃園國際機場 T2",
+   "lat": null,
+   "lng": null,
+   "cost": null,
+   "note": "07:25 起飛，提早 2 小時到（6 人含 2 個小孩，預留時間）。",
+   "locked": true
+  },
+  {
+   "id": "n02",
+   "date": "2027-02-02",
+   "start": "07:25",
+   "dur": 280,
+   "cat": "transport",
+   "name": "長榮 BR225 桃園→新加坡樟宜",
+   "addr": "桃園 T2 → 樟宜 T3",
+   "lat": null,
+   "lng": null,
+   "cost": {
+    "amount": 129154,
+    "cur": "TWD",
+    "basis": "group",
+    "est": false
+   },
+   "note": "已訂（11/10 易遊網）：6 人來回含稅合計 NT$129,154（此金額含回程 BR216）；經濟艙，每人托運 2 件各 23 公斤、手提 1 件 7 公斤。12:05 抵達樟宜 T3；起飛前看長榮通知有無改時間。退票每人 NT$3,410＋服務費 NT$800；改期每人 NT$1,400＋服務費 NT$500，另補價差。",
+   "locked": true
+  },
+  {
+   "id": "n03",
+   "date": "2027-02-02",
+   "start": "12:05",
+   "dur": 95,
+   "cat": "transport",
+   "name": "抵達樟宜機場 T3・入境提領行李",
+   "addr": "樟宜機場 T3",
+   "lat": 1.35458,
+   "lng": 103.98541,
+   "cost": null,
+   "note": "入境前 3 天內線上填 SG Arrival Card（每人都要，小孩可由大人代填）。航廈 ATM 提取或換匯新幣。",
+   "locked": false
+  },
+  {
+   "id": "n04",
+   "date": "2027-02-02",
+   "start": "13:45",
+   "dur": 60,
+   "cat": "spot",
+   "name": "星耀樟宜 雨漩渦（Rain Vortex）與資生堂森林谷",
+   "addr": "星耀樟宜 Jewel Changi",
+   "lat": 1.36022,
+   "lng": 103.98967,
+   "cost": null,
+   "note": "40 米高室內瀑布，與航廈相連、步行可達。樟宜機場、Jewel 有免費 Wi-Fi。",
+   "locked": false
+  },
+  {
+   "id": "n05",
+   "date": "2027-02-02",
+   "start": "15:30",
+   "dur": 60,
+   "cat": "stay",
+   "name": "Oasia Hotel Downtown 辦理入住",
+   "addr": "100 Peck Seah St，丹戎巴葛站 Exit A 步行 1 分鐘",
+   "lat": 1.27587,
+   "lng": 103.84434,
+   "cost": {
+    "amount": 33317,
+    "cur": "TWD",
+    "basis": "group",
+    "est": true
+   },
+   "note": "待預訂：Booking Genius 折扣，高級雙床房 2 間 × 2 晚含稅約 NT$33,317（11/6 前查價，訂前再查）。分房：爸媽＋11 歲／提夫＋xo＋4 歲。從機場搭 Grab 6 人座（或 2 台計程車）約 20–25 分鐘，車資以現場為準。",
+   "locked": false
+  },
+  {
+   "id": "n06",
+   "date": "2027-02-02",
+   "start": "17:30",
+   "dur": 90,
+   "cat": "spot",
+   "name": "牛車水新春年貨大街・生肖燈飾",
+   "addr": "牛車水 Chinatown",
+   "lat": 1.28227,
+   "lng": 103.84315,
+   "cost": null,
+   "note": "新春燈飾晚上人多，小孩穿亮色衣服、約好走散集合點。從飯店步行約 6–8 分鐘。",
+   "locked": false
+  },
+  {
+   "id": "n07",
+   "date": "2027-02-02",
+   "start": "19:00",
+   "dur": 75,
+   "cat": "food",
+   "name": "麥士威熟食中心晚餐（天天海南雞飯、老伴豆花、金華魚片米粉）",
+   "addr": "Maxwell Food Centre，牛車水",
+   "lat": null,
+   "lng": null,
+   "cost": null,
+   "note": "天天週一公休，營業到 20:00、19:30 最後點餐；過年前後攤位可能休假，出發前看店家公告。小販中心用面紙「佔位」是當地習慣，別坐有放東西的位子。座標未查到，地圖上不顯示。",
+   "locked": false
+  },
+  {
+   "id": "n08",
+   "date": "2027-02-03",
+   "start": "09:30",
+   "dur": 150,
+   "cat": "spot",
+   "name": "濱海灣花園 花穹＋雲霧林冷室",
+   "addr": "Gardens by the Bay",
+   "lat": 1.28115,
+   "lng": 103.86496,
+   "cost": {
+    "amount": 248,
+    "cur": "SGD",
+    "basis": "group",
+    "est": true
+   },
+   "note": "待預訂（官網先買）：雙冷室聯票非居民大人 S$46、3–12 歲 S$32、3 歲以下免費（官網 11/10 查）。總額依 4 大 2 小（11、4 歲）推算：4×S$46＋2×S$32＝S$248。冷室每月有一天保養休館，2 月休館日訂前再查。花穹新春花展 2027/1/15–2/28。雲霧林現為「侏羅紀世界」展，音效大，4 歲小孩怕的話大人陪著走。",
+   "locked": false
+  },
+  {
+   "id": "n09",
+   "date": "2027-02-03",
+   "start": "12:15",
+   "dur": 90,
+   "cat": "food",
+   "name": "金沙商場 Rasapura Masters 美食街午餐",
+   "addr": "Marina Bay Sands B2",
+   "lat": 1.2837,
+   "lng": 103.86072,
+   "cost": null,
+   "note": "B2，10:00–23:00，有肉骨茶攤，依現場點餐。座標為金沙商場位置。",
+   "locked": false
+  },
+  {
+   "id": "n10",
+   "date": "2027-02-03",
+   "start": "14:00",
+   "dur": 150,
+   "cat": "stay",
+   "name": "回 Oasia Hotel 休息（第 2 晚）",
+   "addr": "Oasia Hotel Downtown",
+   "lat": 1.27587,
+   "lng": 103.84434,
+   "cost": null,
+   "note": "避開赤道正午烈日，孩子 27 樓高空泳池戲水或補眠（泳池設施以飯店現況為準）。",
+   "locked": false
+  },
+  {
+   "id": "n11",
+   "date": "2027-02-03",
+   "start": "18:00",
+   "dur": 90,
+   "cat": "food",
+   "name": "Jurassic Nest 美食廣場晚餐",
+   "addr": "Gardens by the Bay 園內",
+   "lat": 1.28115,
+   "lng": 103.86496,
+   "cost": null,
+   "note": "11:00–21:00，20:30 最後點餐。原本的沙嗲灣 Satay by the Bay 已於 2026/10/1 永久關閉，不要排進去；想吃辣椒螃蟹可改回金沙 Rasapura。座標為花園位置。",
+   "locked": false
+  },
+  {
+   "id": "n12",
+   "date": "2027-02-03",
+   "start": "19:45",
+   "dur": 30,
+   "cat": "spot",
+   "name": "Spectra 戶外光影水舞秀（金沙活動廣場）",
+   "addr": "Event Plaza，Marina Bay Sands",
+   "lat": 1.2837,
+   "lng": 103.86072,
+   "cost": null,
+   "note": "免費；週日到週四 20:00、21:00 兩場，每場 15 分鐘，看 20:00 場。",
+   "locked": false
+  },
+  {
+   "id": "n13",
+   "date": "2027-02-03",
+   "start": "20:30",
+   "dur": 45,
+   "cat": "spot",
+   "name": "超級樹叢燈光秀 Garden Rhapsody（20:45 場）",
+   "addr": "Gardens by the Bay",
+   "lat": 1.28115,
+   "lng": 103.86496,
+   "cost": null,
+   "note": "結束後搭車回飯店。備選：若投票改選夜間動物園，改 18:30 前往萬態野生動物園（門票訂前再查，需提前訂票；晚上蚊子多、穿包鞋、不能用閃光燈）。",
+   "locked": false
+  },
+  {
+   "id": "n14",
+   "date": "2027-02-04",
+   "start": "09:30",
+   "dur": 30,
+   "cat": "stay",
+   "name": "Oasia Hotel 退房",
+   "addr": "Oasia Hotel Downtown",
+   "lat": 1.27587,
+   "lng": 103.84434,
+   "cost": null,
+   "note": "行李上車。",
+   "locked": false
+  },
+  {
+   "id": "n15",
+   "date": "2027-02-04",
+   "start": "10:00",
+   "dur": 150,
+   "cat": "transport",
+   "name": "新加坡→新山 Skudai 跨境（姐夫安排）",
+   "addr": "新加坡 → 馬來西亞新山 Skudai",
+   "lat": null,
+   "lng": null,
+   "cost": null,
+   "note": "由姐夫安排（細節待姐夫）；過年前後關口車多，時間抓寬一點。護照效期 6 個月以上，馬來西亞 MDAC 入境前 3 天內先填好。若自己開車要帶台灣駕照＋國際駕照、靠左行駛；兒童安全座椅先跟姐夫確認。",
+   "locked": false
+  },
+  {
+   "id": "n16",
+   "date": "2027-02-04",
+   "start": "12:30",
+   "dur": 60,
+   "cat": "food",
+   "name": "Paradigm Mall 午餐・與姐夫一家會合",
+   "addr": "Paradigm Mall Johor Bahru",
+   "lat": 1.51618,
+   "lng": 103.68526,
+   "cost": null,
+   "note": "與姐夫一家（卞、乃瑜＋7 歲、5 歲）在 Skudai 會合，10 人團聚。新幣換馬幣在新山換比較划算。",
+   "locked": false
+  },
+  {
+   "id": "n17",
+   "date": "2027-02-04",
+   "start": "15:00",
+   "dur": 60,
+   "cat": "stay",
+   "name": "Hyatt Place JB Paradigm Mall 入住",
+   "addr": "Paradigm Mall 商場直通",
+   "lat": 1.51618,
+   "lng": 103.68526,
+   "cost": {
+    "amount": 22970,
+    "cur": "TWD",
+    "basis": "group",
+    "est": true
+   },
+   "note": "待預訂：Booking 標準客房 2 間 × 2 晚含稅約 NT$22,970，免費取消。爸媽 1 間、提夫家 1 間；姐夫家住 Skudai 家中。新山 2/4–2/6 用車由姐夫安排（細節待姐夫）。座標為商場位置。",
+   "locked": false
+  },
+  {
+   "id": "n18",
+   "date": "2027-02-04",
+   "start": "18:00",
+   "dur": 90,
+   "cat": "food",
+   "name": "亞彬養生肉骨茶晚餐（砂煲肉骨茶、油條、胡椒豬肚湯、滷豬腳）",
+   "addr": "新山（分店待定）",
+   "lat": null,
+   "lng": null,
+   "cost": null,
+   "note": "亞彬在 Skudai 沒有分店，新山有 Taman Pelangi、Setia Indah、Bukit Indah 等店，去哪家、車程訂前再查，所以地圖不顯示。",
+   "locked": false
+  },
+  {
+   "id": "n19",
+   "date": "2027-02-04",
+   "start": "19:30",
+   "dur": 90,
+   "cat": "spot",
+   "name": "Paradigm Mall 超市採買迎春水果、零食與伴手禮",
+   "addr": "Paradigm Mall",
+   "lat": 1.51618,
+   "lng": 103.68526,
+   "cost": null,
+   "note": "除夕下午起很多店提早打烊，伴手禮與零食早點買。",
+   "locked": false
+  },
+  {
+   "id": "n20",
+   "date": "2027-02-05",
+   "start": "08:45",
+   "dur": 75,
+   "cat": "food",
+   "name": "華美茶餐室 南洋早餐（炭烤咖椰吐司、半熟蛋、白咖啡）",
+   "addr": "Restoran Hua Mui，Jalan Trus",
+   "lat": 1.45737,
+   "lng": 103.76428,
+   "cost": null,
+   "note": "1946 年老字號。Jalan Trus 老店平日 08:00–17:00（官網），除夕營業時間訂前再查，要早去。Skudai 開車到新山市區約 20 分鐘。",
+   "locked": false
+  },
+  {
+   "id": "n21",
+   "date": "2027-02-05",
+   "start": "10:15",
+   "dur": 75,
+   "cat": "spot",
+   "name": "柔佛古廟進香祈福",
+   "addr": "Johor Ancient Temple",
+   "lat": 1.46057,
+   "lng": 103.763,
+   "cost": null,
+   "note": "五幫神明共祀，新山華人歷史核心象徵，免費參觀。",
+   "locked": false
+  },
+  {
+   "id": "n22",
+   "date": "2027-02-05",
+   "start": "11:30",
+   "dur": 60,
+   "cat": "spot",
+   "name": "陳旭年文化街區散步・協裕麵包買柴燒香蕉蛋糕",
+   "addr": "Hiap Joo Bakery，Jalan Tan Hiok Nee",
+   "lat": 1.45667,
+   "lng": 103.76436,
+   "cost": null,
+   "note": "平日 07:30 起賣，賣完為止；除夕有沒有開訂前再查。",
+   "locked": false
+  },
+  {
+   "id": "n23",
+   "date": "2027-02-05",
+   "start": "13:00",
+   "dur": 270,
+   "cat": "stay",
+   "name": "回 Hyatt Place 休息避暑（第 2 晚）",
+   "addr": "Paradigm Mall",
+   "lat": 1.51618,
+   "lng": 103.68526,
+   "cost": null,
+   "note": "",
+   "locked": false
+  },
+  {
+   "id": "n24",
+   "date": "2027-02-05",
+   "start": "18:00",
+   "dur": 150,
+   "cat": "food",
+   "name": "除夕年夜飯圍爐（10 人，七彩撈魚生 Lo Hei）",
+   "addr": "餐廳包廂或姐夫家（待定）",
+   "lat": null,
+   "lng": null,
+   "cost": null,
+   "note": "待姐夫家敲定：私宅圍爐或餐廳年菜／盆菜；除夕熱門，需提早 2 個月（12 月前）預約。發紅包用新鈔、偶數金額、避開 4；到人家家裡帶個小禮（橘子成對）。",
+   "locked": false
+  },
+  {
+   "id": "n25",
+   "date": "2027-02-05",
+   "start": "20:30",
+   "dur": 90,
+   "cat": "spot",
+   "name": "姐夫家客廳茶敘守歲",
+   "addr": "新山 Skudai 姐夫家",
+   "lat": null,
+   "lng": null,
+   "cost": null,
+   "note": "確認翌日渡海證件手續。",
+   "locked": false
+  },
+  {
+   "id": "n26",
+   "date": "2027-02-06",
+   "start": "08:00",
+   "dur": 120,
+   "cat": "stay",
+   "name": "初一拜年・Hyatt Place 退房",
+   "addr": "Paradigm Mall",
+   "lat": 1.51618,
+   "lng": 103.68526,
+   "cost": null,
+   "note": "行李上車。",
+   "locked": false
+  },
+  {
+   "id": "n27",
+   "date": "2027-02-06",
+   "start": "10:30",
+   "dur": 45,
+   "cat": "transport",
+   "name": "Stulang Laut 碼頭 換登船證・托運・馬來西亞出境",
+   "addr": "Berjaya Waterfront Ferry Terminal，Stulang Laut",
+   "lat": 1.47028,
+   "lng": 103.78491,
+   "cost": null,
+   "note": "開船前 1 小時到。車子怎麼送到碼頭、車子如何處理由姐夫安排（細節待姐夫）；車程約 30 分鐘。",
+   "locked": false
+  },
+  {
+   "id": "n28",
+   "date": "2027-02-06",
+   "start": "11:30",
+   "dur": 90,
+   "cat": "transport",
+   "name": "渡輪 Stulang Laut → 巴淡島 Batam Centre（10 人）",
+   "addr": "Stulang Laut → Batam Centre",
+   "lat": 1.47028,
+   "lng": 103.78491,
+   "cost": {
+    "amount": 267,
+    "cur": "SGD",
+    "basis": "group",
+    "est": true
+   },
+   "note": "待預訂：singaporeferry.com 11/11 查 2/6 可訂，大人 S$26.73／人，10 人約 S$267（兒童價訂前再查）。建議 11:30（新山時間）開 → 12:00（印尼時間）到；備案 14:30 開 → 15:00 到。班次 08:30、11:30、14:30、17:30。網站標 Dolphin Fast Ferry，碼頭班表把這班列給 Pintas，以訂票時為準。初一可能減班，前一天再確認。新山沒有直達 Nongsa 的船。",
+   "locked": false
+  },
+  {
+   "id": "n29",
+   "date": "2027-02-06",
+   "start": "13:00",
+   "dur": 15,
+   "cat": "transport",
+   "name": "抵達 Batam Centre・印尼入境（e-VOA）",
+   "addr": "Batam Centre 碼頭",
+   "lat": 1.13175,
+   "lng": 104.05543,
+   "cost": {
+    "amount": 5000000,
+    "cur": "IDR",
+    "basis": "group",
+    "est": true
+   },
+   "note": "印尼當地時間 12:00（比新加坡慢 1 小時，手錶調慢）。全團 10 人需事先線上辦印尼 e-VOA（evisa.imigrasi.go.id，每人 Rp500,000，約 NT$900〔11/10 匯率〕，可停留 30 天）並填 All Indonesia 申報；此欄為 10 人 × Rp500,000。碼頭外拉客計程車先講價，建議 Grab／Gojek 或請飯店付費接送。",
+   "locked": false
+  },
+  {
+   "id": "n30",
+   "date": "2027-02-06",
+   "start": "13:15",
+   "dur": 75,
+   "cat": "food",
+   "name": "Batam Centre 碼頭附近午餐（店家待定）",
+   "addr": "Batam Centre",
+   "lat": 1.13175,
+   "lng": 104.05543,
+   "cost": null,
+   "note": "印尼當地 12:15–13:30。",
+   "locked": false
+  },
+  {
+   "id": "n31",
+   "date": "2027-02-06",
+   "start": "16:00",
+   "dur": 60,
+   "cat": "stay",
+   "name": "Montigo Resorts Nongsa 別墅入住",
+   "addr": "Montigo Resorts Nongsa，Nongsa, Batam",
+   "lat": 1.18165,
+   "lng": 104.07327,
+   "cost": {
+    "amount": 128672,
+    "cur": "TWD",
+    "basis": "group",
+    "est": true
+   },
+   "note": "印尼當地 15:00（迎賓飲料、Check-in；退房到 12:00）。首選：3 棟獨立別墅 3 晚（爸媽標準單臥室 NT$34,798、提夫家與姐夫家各一棟兩臥室山邊別墅 NT$46,937），合計約 NT$128,672（Booking 11/6 實查，免費取消；價格訂前再查）。備選：Batam Marriott Hotel Harbour Bay（評分 9.2，5 星市區飯店、無海灘與兒童俱樂部）4 間 3 晚 NT$92,048 不含早／NT$103,144 含早，2/3 前免費取消。Batam Centre 到 Montigo 約 20 公里、約 25 分鐘；Montigo 免費接駁只到 Nongsapura 碼頭，Batam Centre 要付費接送（價格沒公布，入住前 72 小時跟飯店約），10 人加行李要 2–3 台 6–7 人座，或叫 Grab／Gojek。",
+   "locked": false
+  },
+  {
+   "id": "n32",
+   "date": "2027-02-06",
+   "start": "18:00",
+   "dur": 90,
+   "cat": "spot",
+   "name": "Montigo 私人海灘・泳池賞落日",
+   "addr": "Montigo Resorts Nongsa",
+   "lat": 1.18165,
+   "lng": 104.07327,
+   "cost": null,
+   "note": "印尼當地 17:00–18:30。海邊紫外線很強，小孩戲水穿防曬衣、2 小時補擦防曬。",
+   "locked": false
+  },
+  {
+   "id": "n33",
+   "date": "2027-02-06",
+   "start": "19:30",
+   "dur": 120,
+   "cat": "food",
+   "name": "初一迎春晚餐（飯店內餐廳）",
+   "addr": "Montigo Resorts Nongsa",
+   "lat": 1.18165,
+   "lng": 104.07327,
+   "cost": null,
+   "note": "印尼當地 18:30–20:30；訂房後確認餐廳。印尼自來水不能生飲，刷牙也用瓶裝水。",
+   "locked": false
+  },
+  {
+   "id": "n34",
+   "date": "2027-02-07",
+   "start": "09:00",
+   "dur": 90,
+   "cat": "food",
+   "name": "飯店早餐",
+   "addr": "Montigo Resorts Nongsa",
+   "lat": 1.18165,
+   "lng": 104.07327,
+   "cost": null,
+   "note": "印尼當地 08:00–09:30；看訂的房價含不含早。",
+   "locked": false
+  },
+  {
+   "id": "n35",
+   "date": "2027-02-07",
+   "start": "10:30",
+   "dur": 120,
+   "cat": "spot",
+   "name": "兒童俱樂部（TILO Kids Club）・泳池・海灘",
+   "addr": "Montigo Resorts Nongsa",
+   "lat": 1.18165,
+   "lng": 104.07327,
+   "cost": null,
+   "note": "印尼當地 09:30–11:30。兒童俱樂部 4–12 歲，每天 09:00–17:00（官網）；大人泳池畔放空。",
+   "locked": false
+  },
+  {
+   "id": "n36",
+   "date": "2027-02-07",
+   "start": "15:00",
+   "dur": 150,
+   "cat": "spot",
+   "name": "Sea Forest Adventure 海灣飛索・水上設施",
+   "addr": "Sea Forest Adventure，Nongsa",
+   "lat": null,
+   "lng": null,
+   "cost": null,
+   "note": "印尼當地 14:00–16:30；活動費用待定，依現場選購設施為準。與 Montigo 同在 Nongsa 區，要叫車。飛索有身高體重限制，現場先問；午後雷雨會暫停戶外設施。Sea Forest 網站寫週四到週一 09:00–17:00 開、週二三休，2/7 是週日，去前再打電話確認。座標未查到，地圖不顯示。",
+   "locked": false
+  },
+  {
+   "id": "n37",
+   "date": "2027-02-07",
+   "start": "19:00",
+   "dur": 90,
+   "cat": "food",
+   "name": "海風燒烤晚餐（炭火海蝦、沙嗲、椰子布丁）",
+   "addr": "Montigo Resorts Nongsa",
+   "lat": 1.18165,
+   "lng": 104.07327,
+   "cost": null,
+   "note": "印尼當地 18:00–19:30。",
+   "locked": false
+  },
+  {
+   "id": "n38",
+   "date": "2027-02-07",
+   "start": "21:00",
+   "dur": 90,
+   "cat": "spot",
+   "name": "傳統印尼草本精油 SPA 按摩（待定）",
+   "addr": "飯店 SPA",
+   "lat": 1.18165,
+   "lng": 104.07327,
+   "cost": null,
+   "note": "印尼當地 20:00–21:30；待定、需預約。印尼齋戒月預計 2/8 左右開始（官方未公告），部分清真小吃白天可能不開。",
+   "locked": false
+  },
+  {
+   "id": "n39",
+   "date": "2027-02-08",
+   "start": "10:00",
+   "dur": 120,
+   "cat": "stay",
+   "name": "睡到自然醒・飯店慢時光・泳池",
+   "addr": "Montigo Resorts Nongsa",
+   "lat": 1.18165,
+   "lng": 104.07327,
+   "cost": null,
+   "note": "印尼當地 09:00–11:00；可租自行車漫遊林道、別墅客廳話家常。",
+   "locked": false
+  },
+  {
+   "id": "n40",
+   "date": "2027-02-08",
+   "start": "13:00",
+   "dur": 90,
+   "cat": "food",
+   "name": "飯店簡單輕食午餐",
+   "addr": "Montigo Resorts Nongsa",
+   "lat": 1.18165,
+   "lng": 104.07327,
+   "cost": null,
+   "note": "印尼當地 12:00–13:30。",
+   "locked": false
+  },
+  {
+   "id": "n41",
+   "date": "2027-02-08",
+   "start": "17:00",
+   "dur": 90,
+   "cat": "spot",
+   "name": "Nagoya 市區按摩舒壓（店家待定）",
+   "addr": "巴淡島 Nagoya 市區（非日本名古屋）",
+   "lat": 1.1463,
+   "lng": 104.0124,
+   "cost": null,
+   "note": "印尼當地 16:00–17:30；費用待定、去前再選。叫兩台 Grab 從 Nongsa 約 35 分鐘（車程訂前再查），車資以現場為準。選有標價的店，貴重物品不離身。座標為 Nagoya 區域位置。",
+   "locked": false
+  },
+  {
+   "id": "n42",
+   "date": "2027-02-08",
+   "start": "19:00",
+   "dur": 120,
+   "cat": "food",
+   "name": "Harbour Bay 活海鮮晚宴（水族箱現撈）",
+   "addr": "Harbour Bay，Batam",
+   "lat": 1.1538,
+   "lng": 104.00098,
+   "cost": null,
+   "note": "印尼當地 18:00–20:00；費用待定、依現場點餐。先問秤重單價（每公斤）再點，結帳核對重量。晚上回程用叫車 App，印尼當地 20:15 出發（新加坡 21:15），當地 21:00（新加坡 22:00）回到 Montigo 整理行李。",
+   "locked": false
+  },
+  {
+   "id": "n43",
+   "date": "2027-02-09",
+   "start": "09:15",
+   "dur": 75,
+   "cat": "transport",
+   "name": "Montigo 接駁到 Nongsapura 碼頭・辦登船出境",
+   "addr": "Nongsa 碼頭",
+   "lat": 1.18782,
+   "lng": 104.09479,
+   "cost": null,
+   "note": "印尼當地 08:15 出發（免費接駁約 5 分鐘，前一天跟櫃台約時間），08:30 前辦登船、出境（Batam Fast 規定開船前 30 分鐘拿登船證到出境閘口）。",
+   "locked": false
+  },
+  {
+   "id": "n44",
+   "date": "2027-02-09",
+   "start": "10:30",
+   "dur": 50,
+   "cat": "transport",
+   "name": "渡輪 Nongsa → 新加坡 Tanah Merah（6 人）",
+   "addr": "Nongsa → Tanah Merah",
+   "lat": 1.18782,
+   "lng": 104.09479,
+   "cost": {
+    "amount": 238,
+    "cur": "SGD",
+    "basis": "group",
+    "est": true
+   },
+   "note": "待預訂：singaporeferry.com 或 Batam Fast，S$39.60／人，6 人約 S$238（11/11 查，兒童價訂前再查）。印尼當地 09:30 開 → 11:20（新加坡時間）到，航程 50 分鐘。2/9 每天 06:00、08:00、09:30、12:10、14:20、15:40、17:30、20:00（印尼時間）開；備案 08:00 開 → 09:50 到，12:10 那班 14:00 才到、來不及。備選（若改住萬豪）：Harbour Bay 碼頭搭 Horizon Fast Ferry 07:15→09:05 或 08:30→10:20（巴淡時間開、新加坡時間到）到 HarbourFront，S$41.58 起，再搭車約 30 分鐘到樟宜。",
+   "locked": false
+  },
+  {
+   "id": "n45",
+   "date": "2027-02-09",
+   "start": "11:20",
+   "dur": 30,
+   "cat": "transport",
+   "name": "抵達 Tanah Merah 碼頭・新加坡入境",
+   "addr": "Tanah Merah Ferry Terminal",
+   "lat": 1.31457,
+   "lng": 103.98829,
+   "cost": null,
+   "note": "要再填 SG Arrival Card（巴淡島出境後）。入境後搭計程車約 10 分鐘（約 7.6 公里）到樟宜 T3。",
+   "locked": false
+  },
+  {
+   "id": "n46",
+   "date": "2027-02-09",
+   "start": "12:00",
+   "dur": 180,
+   "cat": "transport",
+   "name": "樟宜 T3 預辦登機・托運・午餐・免稅店",
+   "addr": "樟宜機場 T3",
+   "lat": 1.35458,
+   "lng": 103.98541,
+   "cost": null,
+   "note": "班加旺蘇羅斑蘭蛋糕、TWG 茶葉。至少留 3 小時；剩下的印尼盾在當地花完，台灣很難換回。",
+   "locked": false
+  },
+  {
+   "id": "n47",
+   "date": "2027-02-09",
+   "start": "15:45",
+   "dur": 270,
+   "cat": "transport",
+   "name": "長榮 BR216 新加坡樟宜→桃園",
+   "addr": "樟宜 T3 → 桃園",
+   "lat": 1.35458,
+   "lng": 103.98541,
+   "cost": null,
+   "note": "已訂（11/10 易遊網，6 人）。15:45 起飛 → 20:15 抵桃園。機票費用已計入 2/2 去程 NT$129,154。",
+   "locked": true
+  },
+  {
+   "id": "n48",
+   "date": "2027-02-09",
+   "start": "14:45",
+   "dur": 90,
+   "cat": "transport",
+   "name": "【姐夫一家 4 人】Batam Centre → Stulang Laut 渡輪回新山",
+   "addr": "Batam Centre → Stulang Laut",
+   "lat": null,
+   "lng": null,
+   "cost": {
+    "amount": 107,
+    "cur": "SGD",
+    "basis": "group",
+    "est": true
+   },
+   "note": "待預訂：印尼當地 13:45 開 → 16:15（新山時間）到；S$26.73／人，4 人約 S$107（11/11 查）。備案印尼 10:30 開 → 13:00 到。可訂班次印尼 07:30、10:30、13:45、17:00（標 Dolphin Fast Ferry，Dolphin 官網另列 06:30、09:00、12:30、15:30，以訂票時為準）。12:00 退房後坐車到 Batam Centre（約 20 公里、約 25 分鐘，Grab 或飯店付費接送），12:45 前到。",
+   "locked": false
+  }
+ ],
+ "routes": {
+  "n02>n03": {
+   "mode": "ferry",
+   "min": 0,
+   "cost": 0,
+   "est": false,
+   "hide": true
+  },
+  "n28>n29": {
+   "mode": "ferry",
+   "min": 0,
+   "cost": 0,
+   "est": false,
+   "hide": true
+  },
+  "n44>n45": {
+   "mode": "ferry",
+   "min": 0,
+   "cost": 0,
+   "est": false,
+   "hide": true
+  },
+  "n26>n27": {
+   "mode": "car",
+   "min": 30,
+   "cost": 0,
+   "est": true
+  },
+  "n03>n04": {
+   "mode": "walk",
+   "min": 5,
+   "cost": 0,
+   "est": true
+  },
+  "n04>n05": {
+   "mode": "taxi",
+   "min": 25,
+   "cost": 0,
+   "est": true
+  },
+  "n21>n22": {
+   "mode": "walk",
+   "min": 0,
+   "cost": 0,
+   "est": false,
+   "hide": true
+  },
+  "n30>n31": {
+   "mode": "taxi",
+   "min": 25,
+   "cost": 0,
+   "est": true
+  },
+  "n45>n46": {
+   "mode": "taxi",
+   "min": 10,
+   "cost": 0,
+   "est": true
+  },
+  "n14>n16": {
+   "mode": "car",
+   "min": 0,
+   "cost": 0,
+   "est": false,
+   "hide": true
+  }
+ },
+ "packing": [
+  {
+   "id": "p1",
+   "cat": "證件與金錢",
+   "name": "護照（效期 6 個月以上）",
+   "qty": 6,
+   "note": "台灣護照新馬免簽",
+   "done": false
+  },
+  {
+   "id": "p2",
+   "cat": "證件與金錢",
+   "name": "SG Arrival Card／MDAC／印尼 e-VOA 確認畫面",
+   "qty": 1,
+   "note": "入境前 3 天內填；每人都要（含小孩）；e-VOA 全團 10 人",
+   "done": false
+  },
+  {
+   "id": "p3",
+   "cat": "證件與金錢",
+   "name": "新幣、馬幣、印尼盾少量現金",
+   "qty": 1,
+   "note": "小攤販、計程車、小費用；印尼盾剩的在當地花完",
+   "done": false
+  },
+  {
+   "id": "p4",
+   "cat": "證件與金錢",
+   "name": "長榮機票電子票（BR225／BR216）",
+   "qty": 1,
+   "note": "電子機票寄提夫信箱",
+   "done": false
+  },
+  {
+   "id": "p5",
+   "cat": "證件與金錢",
+   "name": "國際駕照＋台灣駕照",
+   "qty": 1,
+   "note": "只在自己開車時需要（目前用車由姐夫安排）",
+   "done": false
+  },
+  {
+   "id": "p6",
+   "cat": "證件與金錢",
+   "name": "紅包（新鈔、偶數金額）",
+   "qty": 1,
+   "note": "避開 4",
+   "done": false
+  },
+  {
+   "id": "p7",
+   "cat": "衣物",
+   "name": "輕便雨具",
+   "qty": 2,
+   "note": "2 月新加坡一個月約 9 天短暫陣雨",
+   "done": false
+  },
+  {
+   "id": "p8",
+   "cat": "衣物",
+   "name": "薄外套",
+   "qty": 6,
+   "note": "冷室與室內冷氣強",
+   "done": false
+  },
+  {
+   "id": "p9",
+   "cat": "衣物",
+   "name": "孩童防曬衣",
+   "qty": 2,
+   "note": "巴淡島海邊紫外線強",
+   "done": false
+  },
+  {
+   "id": "p10",
+   "cat": "衣物",
+   "name": "包鞋（夜間動物園備選）",
+   "qty": 1,
+   "note": "穿包鞋",
+   "done": false
+  },
+  {
+   "id": "p11",
+   "cat": "衣物",
+   "name": "長褲長袖（參觀清真寺）",
+   "qty": 1,
+   "note": "",
+   "done": false
+  },
+  {
+   "id": "p12",
+   "cat": "盥洗與藥品",
+   "name": "防曬乳、防蚊液",
+   "qty": 1,
+   "note": "每 2 小時補擦；夜間動物園蚊子多",
+   "done": false
+  },
+  {
+   "id": "p13",
+   "cat": "盥洗與藥品",
+   "name": "常備藥",
+   "qty": 1,
+   "note": "",
+   "done": false
+  },
+  {
+   "id": "p14",
+   "cat": "電子用品",
+   "name": "萬用轉接頭（G 型＋C／F 型）",
+   "qty": 2,
+   "note": "新加坡、馬來西亞英式三孔；印尼歐式圓孔",
+   "done": false
+  },
+  {
+   "id": "p15",
+   "cat": "電子用品",
+   "name": "三國通用 eSIM 或當地 SIM",
+   "qty": 1,
+   "note": "出發前確認手機支援 eSIM",
+   "done": false
+  },
+  {
+   "id": "p16",
+   "cat": "電子用品",
+   "name": "行動電源",
+   "qty": 2,
+   "note": "",
+   "done": false
+  },
+  {
+   "id": "p17",
+   "cat": "孩童用品",
+   "name": "兒童安全座椅（先跟姐夫確認）",
+   "qty": 1,
+   "note": "馬來西亞用車由姐夫安排",
+   "done": false
+  },
+  {
+   "id": "p18",
+   "cat": "其他",
+   "name": "水壺",
+   "qty": 6,
+   "note": "新加坡自來水可生飲；印尼不能",
+   "done": false
+  },
+  {
+   "id": "p19",
+   "cat": "其他",
+   "name": "給姐夫家的小禮（橘子成對）",
+   "qty": 1,
+   "note": "年夜飯到人家家裡帶",
+   "done": false
+  }
+ ]
+}
