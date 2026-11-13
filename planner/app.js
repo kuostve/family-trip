@@ -6,7 +6,7 @@ const LS='tp-draft-v1',HH=56,WD=['日','一','二','三','四','五','六'];
 const $=(s,e=document)=>e.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-let T,ui={page:'plan',mode:'week',date:null,prev:0,showCost:false,changed:false},undo=[],map=null,mapEl=null,mapLayer=null;
+let T,ui={page:'plan',mode:'week',date:null,prev:0,showCost:false,changed:false},undo=[],map=null,mapEl=null,mapLayer=null,tiles=null;
 let nowTimer=null;
 
 /* ---------- helpers ---------- */
@@ -171,7 +171,7 @@ function packingHTML(){
 /* ---------- map ---------- */
 function mountMap(){
   const slot=$('#mapslot');
-  if(!mapEl){mapEl=document.createElement('div');mapEl.id='mapbox';if(window.L){try{map=L.map(mapEl,{zoomControl:true}).setView([1.35,103.85],9);L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);mapLayer=L.layerGroup().addTo(map)}catch(e){map=null}}}
+  if(!mapEl){mapEl=document.createElement('div');mapEl.id='mapbox';if(window.L){try{map=L.map(mapEl,{zoomControl:true});mapLayer=L.layerGroup().addTo(map)}catch(e){map=null}}}
   slot.appendChild(mapEl);
   if(map){map.invalidateSize();drawMap()}else drawFallback();
 }
@@ -179,7 +179,9 @@ function drawMap(fitOnly){
   mapLayer.clearLayers();const its=itemsOf(ui.date).filter(i=>i.lat!=null),pts=[];
   its.forEach((i,k)=>{const ll=[i.lat,i.lng];pts.push(ll);L.marker(ll,{icon:L.divIcon({className:'',html:`<div class="mk" style="background:${CATS[i.cat].c}">${k+1}</div>`,iconSize:[26,26],iconAnchor:[13,13]}),title:i.name}).addTo(mapLayer).bindPopup(esc(i.name))});
   routesOf(ui.date).forEach(r=>{if(!r.same)L.polyline([[r.a.lat,r.a.lng],[r.b.lat,r.b.lng]],{color:MODES[r.mode].c,weight:5,opacity:.85,dashArray:r.mode==='walk'?'2 8':null}).addTo(mapLayer)});
-  if(pts.length)map.fitBounds(pts,{padding:[30,30],maxZoom:15,animate:!reduce});
+  if(pts.length)map.fitBounds(pts,{padding:[30,30],maxZoom:15,animate:false});
+  else if(!tiles)map.setView([1.35,103.85],9,{animate:false});
+  if(!tiles)tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
 }
 function drawFallback(){
   const its=itemsOf(ui.date).filter(i=>i.lat!=null);if(!its.length){mapEl.innerHTML='<div class="map-fallback">這天沒有地點座標</div>';return}
